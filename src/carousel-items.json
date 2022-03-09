@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "imageUrl": "https://manilatoday.net/wp-content/uploads/2020/03/tup-usg-5-1400x1050.jpg",
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+      "imageUrl": "https://s3-ap-southeast-1.amazonaws.com/blog-edukasyon/wp-content/uploads/2019/03/15145235/TUP.jpg",
+      "title": "Sequi ratione delectus eius tempore."
+    },
+    {
+      "imageUrl": "https://gradepowerlearning.com/wp-content/uploads/2018/09/how-to-use-self-study-860x420.jpeg",
+      "title": "Repellat quam, pariatur optio eaque fuga, eligendi qui fugit?"
+    },
+    {
+      "imageUrl": "https://i1.wp.com/www.filipinoscribe.com/wp-content/uploads/2015/10/college-students.jpg?ssl=1",
+      "title": "Sed obcaecati repudiandae molestias ipsam vero! Ratione, quasi."
+    }
+  ]
+}
