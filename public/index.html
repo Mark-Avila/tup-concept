@@ -204,7 +204,7 @@
       </span>
       <ul class="flex justify-between items-center w-full">
         <li>
-          <a href="#">Announcements</a>
+          <a href="#announcements">Announcements</a>
         </li>
         <li>
           <a href="#">News</a>
@@ -218,6 +218,43 @@
       </ul>
     </nav>
 
-    <main></main>
+    <main>
+      <section
+        id="announcements"
+        class="pt-4 px-2 w-full text-center lg:px-20 md:text-left"
+      >
+        <h1 class="font-oswald mb-4 text-2xl text-tup-red lg:text-4xl">
+          Announcements
+        </h1>
+        <div
+          id="announcements-items"
+          class="md:grid md:grid-cols-3 md:grid-rows-1 md:gap-2"
+        >
+          <article
+            class="border border-gray-300 rounded-lg overflow-hidden mb-2 md:mb-0"
+          >
+            <a href="#">
+              <div>
+                <img
+                  src="https://mediaproxy.salon.com/width/1200/https://media.salon.com/2019/09/strtessed-college-student.jpg"
+                  alt="article-img"
+                  class="w-full object-cover"
+                />
+              </div>
+              <div class="p-4 text-left">
+                <h1 class="font-bold font-oswald mb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h1>
+                <p class="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Fugit, explicabo atque sint incidunt nihil saepe eius itaque
+                  corrupti expedita et dolor
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
