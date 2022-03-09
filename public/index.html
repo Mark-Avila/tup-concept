@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Quattrocento:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/11bf3f6b7d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js" async></script>
+
+    <title>TUP Website</title>
+  </head>
+  <body>
+    <nav id="upper-nav" class="bg-gray-800 w-full">
+      <ul class="list-none flex justify-evenly py-4 text-gray-400">
+        <li class="">
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="#">Feedback</a>
+        </li>
+        <li>
+          <a href="#">Portal</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      id="nav-mobile-button"
+      class="bg-tup-red text-white rounded-full p-6 flex items-center justify-center fixed bottom-0 right-0 z-50 m-6"
+      onclick="toggleMobileNav()"
+    >
+      <i class="fa-solid fa-bars fa-2x"></i>
+    </button>
+
+    <nav id="mobile-nav" class="hidden bg-gray-900 h-[94%] w-full fixed">
+      <ul class="text-white p-8 font-oswald h-full flex flex-col">
+        <li class="my-4">
+          <a href="#" class="text-3xl">About</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">Admission</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">Students</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">News</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">Academics</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">Resources</a>
+        </li>
+        <li class="my-4">
+          <a href="#" class="text-3xl">Procurements</a>
+        </li>
+        <li class="text-xl mt-auto">
+          Technological University <br />
+          of the Philippines
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "tup-concept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tw": "tailwindcss -i src/style.css -o public/style.css",
+    "watch:tw": "tailwindcss -i src/style.css -o public/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^2.2.16"
+  }
+}
