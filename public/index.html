@@ -48,7 +48,7 @@
       <i class="fa-solid fa-bars fa-2x"></i>
     </button>
 
-    <nav id="mobile-nav" class="hidden bg-gray-900 h-[94%] w-full fixed">
+    <nav id="mobile-nav" class="hidden bg-gray-900 h-[94%] w-full fixed z-40">
       <ul class="text-white p-8 font-oswald h-full flex flex-col">
         <li class="my-4">
           <a href="#" class="text-3xl">About</a>
@@ -84,69 +84,99 @@
     >
       <div class="flex items-center">
         <img src="tup-logo.png" alt="tup-logo" class="w-16 h-16" />
-        <h1 class="font-oswald text-lg ml-4">
+        <h1 class="font-oswald text-white text-lg ml-4">
           Technological University<br />
           of the Philippines
         </h1>
       </div>
       <ul
-        class="w-full flex justify-between items-center font-oswald box-border"
+        class="w-full flex justify-between items-center font-oswald box-border text-white"
       >
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >About</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >Admission</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >Students</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >News</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >Academics</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >Resources</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
             >Procurements</a
           >
         </li>
       </ul>
     </nav>
 
-    <!-- <header class="relative w-full h-[50vh] lg:h-[97vh] top-0 bg-tup-red">
-      <div id="carousel-image"><img src="w-full h-full"</div>
-    </header> -->
+    <header class="relative w-full h-[50vh] lg:h-[97vh] top-0 z-30">
+      <img
+        src="https://manilatoday.net/wp-content/uploads/2020/03/tup-usg-5-1400x1050.jpg"
+        class="w-full h-full object-cover"
+      />
+      <div
+        id="image-filter"
+        class="w-full h-full bg-black opacity-50 absolute top-0"
+      ></div>
+      <div
+        id="header-body"
+        class="text-white absolute top-0 left-0 w-full h-full p-6 lg:p-24 lg:flex lg:items-end"
+      >
+        <div id="header-text">
+          <h1 class="font-oswald text-2xl lg:text-4xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <p class="font-sans lg:text-2xl opacity-70">Announcements</p>
+        </div>
+      </div>
+      <button
+        id="carousel-left-toggle"
+        class="text-white absolute top-1/2 left-0 ml-12"
+      >
+        <i class="fa-solid fa-angle-left fa-2xl"></i>
+      </button>
+      <button
+        id="carousel-right-toggle"
+        class="text-white absolute top-1/2 right-0 mr-12"
+      >
+        <i class="fa-solid fa-angle-right fa-2xl"></i>
+      </button>
+    </header>
 
     <main></main>
   </body>
