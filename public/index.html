@@ -22,17 +22,19 @@
   </head>
   <body>
     <nav id="upper-nav" class="bg-gray-800 w-full">
-      <ul class="list-none flex justify-evenly py-4 text-gray-400">
-        <li class="">
+      <ul
+        class="list-none flex justify-evenly py-4 text-gray-400 lg:justify-end lg:px-16 lg:py-2 lg:text-sm"
+      >
+        <li class="ml-8">
           <a href="#">Contact</a>
         </li>
-        <li>
+        <li class="ml-8">
           <a href="#">Careers</a>
         </li>
-        <li>
+        <li class="ml-8">
           <a href="#">Feedback</a>
         </li>
-        <li>
+        <li class="ml-8">
           <a href="#">Portal</a>
         </li>
       </ul>
@@ -40,7 +42,7 @@
 
     <button
       id="nav-mobile-button"
-      class="bg-tup-red text-white rounded-full p-6 flex items-center justify-center fixed bottom-0 right-0 z-50 m-6"
+      class="bg-tup-red text-white rounded-full p-6 flex items-center justify-center fixed bottom-0 right-0 z-50 m-6 lg:hidden"
       onclick="toggleMobileNav()"
     >
       <i class="fa-solid fa-bars fa-2x"></i>
@@ -75,5 +77,77 @@
         </li>
       </ul>
     </nav>
+
+    <nav
+      id="desktop-nav"
+      class="hidden w-full lg:absolute lg:grid lg:grid-cols-2 box-border lg:px-16 lg:pt-4 z-50"
+    >
+      <div class="flex items-center">
+        <img src="tup-logo.png" alt="tup-logo" class="w-16 h-16" />
+        <h1 class="font-oswald text-lg ml-4">
+          Technological University<br />
+          of the Philippines
+        </h1>
+      </div>
+      <ul
+        class="w-full flex justify-between items-center font-oswald box-border"
+      >
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >About</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >Admission</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >Students</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >News</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >Academics</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >Resources</a
+          >
+        </li>
+        <li class="flex justify-end">
+          <a
+            href="#"
+            class="text-md border-2 border-transparent hover:border-b-black transition ease-in-out"
+            >Procurements</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <header class="relative w-full h-[50vh] lg:h-[97vh] top-0 bg-tup-red">
+      <div id="carousel-image"><img src="w-full h-full"</div>
+    </header> -->
+
+    <main></main>
   </body>
 </html>
