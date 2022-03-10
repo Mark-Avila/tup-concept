@@ -9,3 +9,13 @@ function toggleMobileNav() {
     mobileNav.style.display = "block";
   }
 }
+
+function fetchCarouselData() {
+  let carouselJson = [];
+
+  fetch("src/carousel-items.json").then(
+    (response) => (carouselJson = response.json())
+  );
+
+  console.log(carouselJson);
+}

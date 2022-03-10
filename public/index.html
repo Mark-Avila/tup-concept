@@ -16,14 +16,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./index.js" async></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+
+    <script src="./index.js"></script>
 
     <title>TUP Website</title>
   </head>
   <body>
-    <nav id="upper-nav" class="bg-gray-800 w-full">
+    <nav id="upper-nav" class="w-full bg-gray-800">
       <ul
-        class="list-none flex justify-evenly py-4 text-gray-400 lg:justify-end lg:px-16 lg:py-2 lg:text-sm"
+        class="flex list-none justify-evenly py-4 text-gray-400 lg:justify-end lg:px-16 lg:py-2 lg:text-sm"
       >
         <li class="ml-8">
           <a href="#">Contact</a>
@@ -42,14 +44,17 @@
 
     <button
       id="nav-mobile-button"
-      class="bg-tup-red text-white rounded-full p-6 flex items-center justify-center fixed bottom-0 right-0 z-50 m-6 lg:hidden"
+      class="fixed bottom-0 right-0 z-50 m-6 flex items-center justify-center rounded-full border-2 border-white bg-tup-red p-6 text-white lg:hidden"
       onclick="toggleMobileNav()"
     >
       <i class="fa-solid fa-bars fa-2x"></i>
     </button>
 
-    <nav id="mobile-nav" class="hidden bg-gray-900 h-[94%] w-full fixed z-40">
-      <ul class="text-white p-8 font-oswald h-full flex flex-col">
+    <nav
+      id="mobile-nav"
+      class="fixed top-0 z-40 hidden h-[100%] w-full bg-gray-900"
+    >
+      <ul class="flex h-full flex-col p-8 font-oswald text-white">
         <li class="my-4">
           <a href="#" class="text-3xl">About</a>
         </li>
@@ -71,7 +76,7 @@
         <li class="my-4">
           <a href="#" class="text-3xl">Procurements</a>
         </li>
-        <li class="text-xl mt-auto">
+        <li class="mt-auto text-xl">
           Technological University <br />
           of the Philippines
         </li>
@@ -80,91 +85,91 @@
 
     <nav
       id="desktop-nav"
-      class="hidden w-full lg:absolute lg:grid lg:grid-cols-2 box-border lg:px-16 lg:pt-4 z-50"
+      class="z-50 box-border hidden w-full lg:absolute lg:grid lg:grid-cols-2 lg:px-16 lg:pt-4"
     >
       <div class="flex items-center">
-        <img src="tup-logo.png" alt="tup-logo" class="w-16 h-16" />
-        <h1 class="font-oswald text-white text-lg ml-4">
+        <img src="tup-logo.png" alt="tup-logo" class="h-16 w-16" />
+        <h1 class="ml-4 font-oswald text-lg text-white">
           Technological University<br />
           of the Philippines
         </h1>
       </div>
       <ul
-        class="w-full flex justify-between items-center font-oswald box-border text-white"
+        class="box-border flex w-full items-center justify-between font-oswald text-white"
       >
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >About</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >Admission</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >Students</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >News</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >Academics</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >Resources</a
           >
         </li>
         <li class="flex justify-end">
           <a
             href="#"
-            class="text-md border-2 border-transparent hover:border-b-white transition ease-in-out"
+            class="text-md border-2 border-transparent transition ease-in-out hover:border-b-white"
             >Procurements</a
           >
         </li>
       </ul>
     </nav>
 
-    <header class="relative w-full h-[50vh] lg:h-[96vh] top-0 z-30">
+    <header class="relative top-0 z-30 h-[50vh] w-full lg:h-[96vh]">
       <img
         src="https://manilatoday.net/wp-content/uploads/2020/03/tup-usg-5-1400x1050.jpg"
-        class="w-full h-full object-cover"
+        class="h-full w-full object-cover"
       />
       <div
         id="image-filter"
-        class="w-full h-full bg-black opacity-50 absolute top-0"
+        class="absolute top-0 h-full w-full bg-black opacity-50"
       ></div>
 
       <div
         id="header-body"
-        class="text-white absolute top-0 left-0 w-full h-full p-6 lg:p-24 lg:flex lg:items-end lg:justify-between"
+        class="absolute top-0 left-0 h-full w-full p-6 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
       >
         <div id="header-text">
           <h1 class="font-oswald text-2xl lg:text-4xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h1>
-          <p class="font-sans lg:text-2xl opacity-70">Announcements</p>
+          <p class="font-sans opacity-70 lg:text-2xl">Announcements</p>
         </div>
-        <div id="indicator" class="text-white hidden items-center lg:flex">
+        <div id="indicator" class="hidden items-center text-white lg:flex">
           <div class="mx-1">
             <i class="fa-solid fa-circle"></i>
           </div>
@@ -182,14 +187,14 @@
 
       <button
         id="carousel-left-toggle"
-        class="text-white absolute top-1/2 left-0 ml-12 hover:bg-white hover:text-black py-4 px-5 rounded-full transition ease-in-out active:scale-90 outline-none"
+        class="outline-none absolute top-1/2 left-0 ml-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-left fa-2xl"></i>
       </button>
 
       <button
         id="carousel-right-toggle"
-        class="text-white absolute top-1/2 right-0 mr-12 hover:bg-white hover:text-black py-4 px-5 rounded-full transition ease-in-out active:scale-90 outline-none"
+        class="outline-none absolute top-1/2 right-0 mr-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-right fa-2xl"></i>
       </button>
@@ -197,17 +202,14 @@
 
     <nav
       id="quick-links"
-      class="bg-tup-red font-sans text-white flex justify-between items-center py-4 px-3 lg:shadow-lg lg:m-10 lg:grid lg:grid-cols-2 lg:px-12 lg:rounded-full"
+      class="flex items-center justify-between bg-tup-red py-4 px-3 font-sans text-white lg:m-10 lg:grid lg:grid-cols-2 lg:rounded-full lg:px-12 lg:shadow-lg"
     >
       <span class="hidden lg:block">
         <h1 class="font-bold">Quick links</h1>
       </span>
-      <ul class="flex justify-between items-center w-full">
+      <ul class="flex w-full items-center justify-between">
         <li>
-          <a href="#announcements">Announcements</a>
-        </li>
-        <li>
-          <a href="#">News</a>
+          <a href="#news">News</a>
         </li>
         <li>
           <a href="#">Colleges</a>
@@ -220,38 +222,300 @@
 
     <main>
       <section
-        id="announcements"
-        class="pt-4 px-2 w-full text-center lg:px-20 md:text-left"
+        id="news"
+        class="mb-8 w-full px-2 pt-4 text-center md:px-8 md:text-left lg:px-20"
       >
-        <h1 class="font-oswald mb-4 text-2xl text-tup-red lg:text-4xl">
-          Announcements
-        </h1>
+        <h1 class="mb-4 font-oswald text-2xl text-tup-red lg:text-4xl">News</h1>
         <div
-          id="announcements-items"
-          class="md:grid md:grid-cols-3 md:grid-rows-1 md:gap-2"
+          id="news-items"
+          class="md:grid md:grid-cols-3 md:grid-rows-1 md:gap-2 lg:grid-cols-4"
         >
+          <aside
+            class="mb-2 flex h-64 w-full overflow-hidden rounded-md border border-gray-300 md:col-span-3 lg:col-span-1 lg:mb-0 lg:h-full lg:flex-col lg:items-center lg:border-transparent"
+          >
+            <div>
+              <img
+                src="./assets/torres-desk.jpg"
+                alt="tup-president"
+                class="h-full w-full object-cover lg:h-48 lg:w-48 lg:rounded-full"
+              />
+            </div>
+            <div
+              class="flex h-full flex-col px-4 py-2 text-left lg:items-center lg:justify-start lg:text-center"
+            >
+              <h1 class="font-oswald text-lg text-tup-red md:mb-4 md:text-2xl">
+                President's corner
+              </h1>
+              <p class="text-sm lg:mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                adipisci nesciunt iusto ab voluptatibus esse repudiandae
+              </p>
+              <button
+                class="mt-auto rounded-md bg-tup-red p-2 text-sm text-white text-opacity-80 lg:mt-0 lg:w-32"
+              >
+                Read more
+              </button>
+            </div>
+          </aside>
           <article
-            class="border border-gray-300 rounded-lg overflow-hidden mb-2 md:mb-0"
+            class="mb-2 overflow-hidden rounded-lg border border-gray-300 md:mb-0"
           >
             <a href="#">
               <div>
                 <img
-                  src="https://mediaproxy.salon.com/width/1200/https://media.salon.com/2019/09/strtessed-college-student.jpg"
+                  src="./assets/gearhawks.jpg"
                   alt="article-img"
-                  class="w-full object-cover"
+                  class="h-64 w-full object-cover"
                 />
               </div>
               <div class="p-4 text-left">
-                <h1 class="font-bold font-oswald mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1 class="mb-2 font-oswald font-bold">
+                  TUP Manila MLBB Varsity Team Clinched the Last Final Slot to
+                  the National Campus Open Season 2
                 </h1>
                 <p class="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Fugit, explicabo atque sint incidunt nihil saepe eius itaque
-                  corrupti expedita et dolor
+                  AcadArena’s National Campus Open Season 2 Mobile Legends: Bang
+                  Bang Qualifiers kicked started last weekend, June 19-20, with
+                  over 37 Collegiate Teams in the Alliance...
                 </p>
               </div>
             </a>
+          </article>
+          <article
+            class="mb-2 overflow-hidden rounded-lg border border-gray-300 md:mb-0"
+          >
+            <a href="#">
+              <div>
+                <img
+                  src="./assets/mpei.jpg"
+                  alt="article-img"
+                  class="h-64 w-full object-cover"
+                />
+              </div>
+              <div class="p-4 text-left">
+                <h1 class="mb-2 font-oswald font-bold">
+                  TUP enters MoU with NRU MPEI
+                </h1>
+                <p class="text-sm">
+                  The Technological University of the Philippines (TUP), Manila,
+                  Philippines, and the National Research University "Moscow
+                  Power Engineering Institute" (NRU MPEI)...
+                </p>
+              </div>
+            </a>
+          </article>
+          <article
+            class="mb-2 overflow-hidden rounded-lg border border-gray-300 md:mb-0"
+          >
+            <a href="#">
+              <div>
+                <img
+                  src="./assets/school.jpg"
+                  alt="article-img"
+                  class="h-64 w-full object-cover"
+                />
+              </div>
+              <div class="p-4 text-left">
+                <h1 class="mb-2 font-oswald font-bold">
+                  TUP Orders and memorandum
+                </h1>
+                <p class="text-sm">
+                  Directives or instructions; prescribe guidelines; and outline
+                  processes, operations, activities, workflows, methods and
+                  procedures necessary in the implementation of stated policies,
+                  goals, objectives, plans and programs
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <svg
+        width="100%"
+        height="100%"
+        id="svg"
+        viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg"
+        class="transition delay-150 duration-300 ease-in-out"
+      >
+        <path
+          d="M 0,400 C 0,400 0,133 0,133 C 100.42105263157896,133.76555023923447 200.84210526315792,134.53110047846891 289,139 C 377.1578947368421,143.46889952153109 453.0526315789473,151.64114832535884 541,141 C 628.9473684210527,130.35885167464116 728.9473684210527,100.90430622009569 828,92 C 927.0526315789473,83.09569377990431 1025.157894736842,94.74162679425838 1127,105 C 1228.842105263158,115.25837320574162 1334.421052631579,124.12918660287082 1440,133 C 1440,133 1440,400 1440,400 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="#c21e3a88"
+          class="path-0 transition-all delay-150 duration-300 ease-in-out"
+          data-darkreader-inline-stroke=""
+          style="--darkreader-inline-stroke: none"
+        ></path>
+        <path
+          d="M 0,400 C 0,400 0,266 0,266 C 91.40669856459331,258.22966507177034 182.81339712918663,250.45933014354063 267,258 C 351.1866028708134,265.5406698564594 428.1531100478468,288.3923444976077 529,281 C 629.8468899521532,273.6076555023923 754.574162679426,235.9712918660287 849,227 C 943.425837320574,218.0287081339713 1007.5502392344497,237.7224880382775 1101,249 C 1194.4497607655503,260.2775119617225 1317.2248803827752,263.1387559808612 1440,266 C 1440,266 1440,400 1440,400 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="#c21e3aff"
+          class="path-1 transition-all delay-150 duration-300 ease-in-out"
+        ></path>
+      </svg>
+
+      <section id="colleges" class="bg-tup-red p-2 md:px-10 lg:px-20">
+        <h1
+          class="mt-4 mb-20 w-full text-center font-oswald text-4xl text-white md:text-left"
+        >
+          Colleges
+        </h1>
+        <div
+          id="college-items"
+          class="md lg:no-scrollbar flex overflow-scroll overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-2"
+        >
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/coe.jpg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Engineering
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </article>
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/cos.jpg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Science
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </article>
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/coie.jpeg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Industrial Education
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-none m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </article>
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/cola.jpg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Liberal Arts
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </article>
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/cit.jpg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Industrial Technology
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
+          </article>
+          <article
+            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+          >
+            <img
+              src="./assets/cofa.jpg"
+              alt="college-pic"
+              class="h-64 w-full object-cover md:h-full md:w-48"
+            />
+            <div
+              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            >
+              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                College of Architecture and Fine Arts
+              </h1>
+              <p class="mb-3 text-sm text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                est ex molestiae nobis!
+              </p>
+              <button
+                class="outline-none w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              >
+                Learn more
+              </button>
+            </div>
           </article>
         </div>
       </section>

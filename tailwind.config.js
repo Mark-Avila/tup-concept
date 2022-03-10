@@ -6,14 +6,18 @@ module.exports = {
     extend: {
       colors: {
         "tup-red": "#C21E3A",
+        "tup-dark": "#590C19",
       },
       fontFamily: {
         oswald: "'Oswald', serif",
+      },
+      backgroundImage: {
+        "layer-pattern": "url('../public/assets/layered-waves-haikei.svg')",
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
