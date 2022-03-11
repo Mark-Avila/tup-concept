@@ -212,10 +212,10 @@
           <a href="#news">News</a>
         </li>
         <li>
-          <a href="#">Colleges</a>
+          <a href="#colleges">Colleges</a>
         </li>
         <li>
-          <a href="#">Campuses</a>
+          <a href="#campuses">Campuses</a>
         </li>
       </ul>
     </nav>
@@ -331,35 +331,9 @@
         </div>
       </section>
 
-      <svg
-        width="100%"
-        height="100%"
-        id="svg"
-        viewBox="0 0 1440 400"
-        xmlns="http://www.w3.org/2000/svg"
-        class="transition delay-150 duration-300 ease-in-out"
-      >
-        <path
-          d="M 0,400 C 0,400 0,133 0,133 C 100.42105263157896,133.76555023923447 200.84210526315792,134.53110047846891 289,139 C 377.1578947368421,143.46889952153109 453.0526315789473,151.64114832535884 541,141 C 628.9473684210527,130.35885167464116 728.9473684210527,100.90430622009569 828,92 C 927.0526315789473,83.09569377990431 1025.157894736842,94.74162679425838 1127,105 C 1228.842105263158,115.25837320574162 1334.421052631579,124.12918660287082 1440,133 C 1440,133 1440,400 1440,400 Z"
-          stroke="none"
-          stroke-width="0"
-          fill="#c21e3a88"
-          class="path-0 transition-all delay-150 duration-300 ease-in-out"
-          data-darkreader-inline-stroke=""
-          style="--darkreader-inline-stroke: none"
-        ></path>
-        <path
-          d="M 0,400 C 0,400 0,266 0,266 C 91.40669856459331,258.22966507177034 182.81339712918663,250.45933014354063 267,258 C 351.1866028708134,265.5406698564594 428.1531100478468,288.3923444976077 529,281 C 629.8468899521532,273.6076555023923 754.574162679426,235.9712918660287 849,227 C 943.425837320574,218.0287081339713 1007.5502392344497,237.7224880382775 1101,249 C 1194.4497607655503,260.2775119617225 1317.2248803827752,263.1387559808612 1440,266 C 1440,266 1440,400 1440,400 Z"
-          stroke="none"
-          stroke-width="0"
-          fill="#c21e3aff"
-          class="path-1 transition-all delay-150 duration-300 ease-in-out"
-        ></path>
-      </svg>
-
       <section id="colleges" class="bg-tup-red p-2 md:px-10 lg:px-20">
         <h1
-          class="mt-4 mb-20 w-full text-center font-oswald text-4xl text-white md:text-left"
+          class="mt-4 mb-10 w-full text-center font-oswald text-4xl text-white md:text-left"
         >
           Colleges
         </h1>
@@ -515,6 +489,105 @@
               >
                 Learn more
               </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="campuses" class="bg-tup-red">
+        <h1 class="w-full p-2 text-center font-oswald text-4xl text-white">
+          Campuses
+        </h1>
+        <div
+          id="campus-items"
+          class="md lg:no-scrollbar flex overflow-scroll overflow-x-scroll"
+        >
+          <article class="relative h-64 min-w-full" id="tup-manila-campus">
+            <img
+              src="./assets/school.jpg"
+              alt="campus-item"
+              class="absolute h-full w-full"
+            />
+            <div
+              id="filter"
+              class="absolute h-full w-full bg-black opacity-30"
+            ></div>
+            <div
+              id="campus-item-text"
+              class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+            >
+              <h1 class="font-oswald text-4xl">Manila</h1>
+              <span class="font-sans">
+                <p>tup@tup.edu.ph</p>
+                <p>www.tup.edu.ph</p>
+                <p>301.3001</p>
+              </span>
+            </div>
+          </article>
+          <article class="relative h-64 min-w-full" id="tup-cavite-campus">
+            <img
+              src="./assets/tup-cavite.jpg"
+              alt="campus-item"
+              class="absolute h-full w-full"
+            />
+            <div
+              id="filter"
+              class="absolute h-full w-full bg-black opacity-30"
+            ></div>
+            <div
+              id="campus-item-text"
+              class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+            >
+              <h1 class="font-oswald text-4xl">Cavite</h1>
+              <span class="font-sans">
+                <p>cavite@tup.edu.ph</p>
+                <p>www.tupcavite.edu.ph</p>
+                <p>416.4920</p>
+              </span>
+            </div>
+          </article>
+          <article class="relative h-64 min-w-full" id="tup-taguig-campus">
+            <img
+              src="./assets/tup-taguig.jpg"
+              alt="campus-item"
+              class="absolute h-full w-full"
+            />
+            <div
+              id="filter"
+              class="absolute h-full w-full bg-black opacity-30"
+            ></div>
+            <div
+              id="campus-item-text"
+              class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+            >
+              <h1 class="font-oswald text-4xl">Cavite</h1>
+              <span class="font-sans">
+                <p>cavite@tup.edu.ph</p>
+                <p>www.tupcavite.edu.ph</p>
+                <p>416.4920</p>
+              </span>
+            </div>
+          </article>
+          <article class="relative h-64 min-w-full" id="tup-visayas-campus">
+            <img
+              src="./assets/tup-vis.jpg"
+              alt="campus-item"
+              class="absolute h-full w-full"
+            />
+            <div
+              id="filter"
+              class="absolute h-full w-full bg-black opacity-30"
+            ></div>
+            <div
+              id="campus-item-text"
+              class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+            >
+              <h1 class="font-oswald text-4xl">Visayas</h1>
+              <span class="font-sans">
+                <p>visayas@tup.edu.ph</p>
+                <p>www.tupvisayas.edu.ph</p>
+                <p>(034) 495 3480</p>
+              </span>
             </div>
           </article>
         </div>
