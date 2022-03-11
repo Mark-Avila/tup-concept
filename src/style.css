@@ -13,11 +13,7 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  .spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  .campus-trans {
+    transition: 200ms ease-in-out;
   }
 }
