@@ -331,287 +331,383 @@
         </div>
       </section>
 
-      <section id="colleges" class="bg-tup-red p-2 md:px-10 lg:px-20">
-        <h1
-          class="mt-4 mb-10 w-full text-center font-oswald text-4xl text-white md:text-left"
-        >
-          Colleges
-        </h1>
-        <div
-          id="college-items"
-          class="md lg:no-scrollbar flex overflow-scroll overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-2"
-        >
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+      <div class="grid grid-cols-1 grid-rows-2">
+        <section>
+          <h1
+            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:px-20 md:text-left"
           >
-            <img
-              src="./assets/coe.jpg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+            University Calendar
+          </h1>
+          <div class="px-2 md:px-20" id="table-pad">
+            <table
+              class="w-full rounded-lg border border-gray-300 text-black lg:w-1/2"
             >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Engineering
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+              <tr
+                class="box-border w-full bg-tup-red text-left font-oswald text-white"
               >
-                Learn more
+                <th class="p-2 py-3">First Semester</th>
+                <th class="p-2 py-3">Event</th>
+              </tr>
+              <tr class="box-border w-full border border-gray-300 text-left">
+                <td class="p-2 py-3">Sept. 15, 2021</td>
+                <td class="p-2 py-3">General Faculty Meeting</td>
+              </tr>
+              <tr class="box-border w-full border border-gray-300 text-left">
+                <td class="p-2 py-3">Oct. 27-29, 2021</td>
+                <td class="p-2 py-3">Prelim Examination</td>
+              </tr>
+              <tr class="box-border w-full border border-gray-300 text-left">
+                <td class="p-2 py-3">Dec. 9-11, 2021</td>
+                <td class="p-2 py-3">Academic Consolidation Week</td>
+              </tr>
+              <tr class="box-border w-full border border-gray-300 text-left">
+                <td class="p-2 py-3">Dec. 12, 2021</td>
+                <td class="p-2 py-3">Deadline for Dropping Subjects</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <section>
+          <h1
+            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:px-20 md:text-left"
+          >
+            Other information
+          </h1>
+          <div class="px-2">
+            <div id="oi-tabs" class="flex overflow-hidden rounded-lg">
+              <button
+                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+              >
+                Important Links
+              </button>
+              <button
+                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+              >
+                Presidents Corner
+              </button>
+              <button
+                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+              >
+                Career's
+              </button>
+              <button
+                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+              >
+                Downloads
               </button>
             </div>
-          </article>
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-          >
-            <img
-              src="./assets/cos.jpg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-            >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Science
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
-              >
-                Learn more
-              </button>
-            </div>
-          </article>
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-          >
-            <img
-              src="./assets/coie.jpeg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-            >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Industrial Education
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-none m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
-              >
-                Learn more
-              </button>
-            </div>
-          </article>
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-          >
-            <img
-              src="./assets/cola.jpg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-            >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Liberal Arts
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
-              >
-                Learn more
-              </button>
-            </div>
-          </article>
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-          >
-            <img
-              src="./assets/cit.jpg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-            >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Industrial Technology
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
-              >
-                Learn more
-              </button>
-            </div>
-          </article>
-          <article
-            class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-          >
-            <img
-              src="./assets/cofa.jpg"
-              alt="college-pic"
-              class="h-64 w-full object-cover md:h-full md:w-48"
-            />
-            <div
-              class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-            >
-              <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                College of Architecture and Fine Arts
-              </h1>
-              <p class="mb-3 text-sm text-white">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                est ex molestiae nobis!
-              </p>
-              <button
-                class="outline-none w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
-              >
-                Learn more
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
 
-      <section id="campuses" class="bg-tup-red md:h-[80vh]">
-        <h1 class="w-full p-2 text-center font-oswald text-4xl text-white">
-          Campuses
-        </h1>
-        <div
-          id="campus-items"
-          class="lg:no-scrollbar mt-5 flex overflow-scroll overflow-x-scroll md:flex md:h-full"
-        >
-          <article
-            class="campus-trans relative h-64 hover:w-[300%] md:h-full md:w-full"
-            id="tup-manila-campus"
+            <div id="oi-important-links" class="flex flex-col">
+              <a
+                href="#"
+                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
+                >Faculty Access Module
+              </a>
+              <a
+                href="#"
+                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
+                >Students Access Module
+              </a>
+              <a
+                href="#"
+                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
+                >Student Applicant Access Module</a
+              >
+              <a
+                href="#"
+                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
+                >Landbank E-payment portal
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-10 box-border bg-tup-red">
+        <section id="colleges" class="p-2 md:px-10 lg:px-20">
+          <h1
+            class="mt-4 mb-10 w-full text-center font-oswald text-4xl text-white md:text-left"
           >
-            <a href="#">
+            Colleges
+          </h1>
+          <div
+            id="college-items"
+            class="md lg:no-scrollbar flex overflow-scroll overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-2"
+          >
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
               <img
-                src="./assets/school.jpg"
-                alt="campus-item"
-                class="absolute h-full w-full object-cover"
+                src="./assets/coe.jpg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
               />
               <div
-                id="filter"
-                class="absolute h-full w-full bg-black opacity-30"
-              ></div>
-              <div
-                id="campus-item-text"
-                class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
               >
-                <h1 class="font-oswald text-4xl">Manila</h1>
-                <span class="font-sans">
-                  <p>tup@tup.edu.ph</p>
-                  <p>www.tup.edu.ph</p>
-                  <p>301.3001</p>
-                </span>
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Engineering
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
               </div>
-            </a>
-          </article>
-          <article
-            class="campus-trans relative h-64 hover:w-[300%] md:h-full md:w-full"
-            id="tup-cavite-campus"
-          >
-            <a href="https://www.tupcavite.edu.ph">
+            </article>
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
               <img
-                src="./assets/tup-cavite.jpg"
-                alt="campus-item"
-                class="absolute h-full w-full object-cover"
+                src="./assets/cos.jpg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
               />
               <div
-                id="filter"
-                class="absolute h-full w-full bg-black opacity-30"
-              ></div>
-              <div
-                id="campus-item-text"
-                class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
               >
-                <h1 class="font-oswald text-4xl">Cavite</h1>
-                <span class="font-sans">
-                  <p>cavite@tup.edu.ph</p>
-                  <p>www.tupcavite.edu.ph</p>
-                  <p>416.4920</p>
-                </span>
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Science
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
               </div>
-            </a>
-          </article>
-          <article
-            class="campus-trans relative h-64 hover:w-[300%] md:h-full md:w-full"
-            id="tup-taguig-campus"
-          >
-            <a href="https://www.tupt.edu.ph">
+            </article>
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
               <img
-                src="./assets/tup-taguig.jpg"
-                alt="campus-item"
-                class="absolute h-full w-full object-cover"
+                src="./assets/coie.jpeg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
               />
               <div
-                id="filter"
-                class="absolute h-full w-full bg-black opacity-30"
-              ></div>
-              <div
-                id="campus-item-text"
-                class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
               >
-                <h1 class="font-oswald text-4xl">Taguig</h1>
-                <span class="font-sans">
-                  <p>taguig@tup.edu.ph</p>
-                  <p>www.tupt.edu.ph</p>
-                  <p>823.2457</p>
-                </span>
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Industrial Education
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-none m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
               </div>
-            </a>
-          </article>
-          <article
-            class="campus-trans relative h-64 hover:w-[300%] md:h-full md:w-full"
-            id="tup-visayas-campus"
-          >
-            <a href="https://www.tupvisayas.edu.ph">
+            </article>
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
               <img
-                src="./assets/tup-vis.jpg"
-                alt="campus-item"
-                class="absolute h-full w-full object-cover"
+                src="./assets/cola.jpg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
               />
               <div
-                id="filter"
-                class="absolute h-full w-full bg-black opacity-30"
-              ></div>
-              <div
-                id="campus-item-text"
-                class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
               >
-                <h1 class="font-oswald text-4xl">Visayas</h1>
-                <span class="font-sans">
-                  <p>visayas@tup.edu.ph</p>
-                  <p>www.tupvisayas.edu.ph</p>
-                  <p>(034) 495 3480</p>
-                </span>
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Liberal Arts
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
               </div>
-            </a>
-          </article>
-        </div>
-      </section>
+            </article>
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
+              <img
+                src="./assets/cit.jpg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
+              />
+              <div
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+              >
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Industrial Technology
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
+              </div>
+            </article>
+            <article
+              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
+            >
+              <img
+                src="./assets/cofa.jpg"
+                alt="college-pic"
+                class="h-64 w-full object-cover md:h-full md:w-48"
+              />
+              <div
+                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
+              >
+                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
+                  College of Architecture and Fine Arts
+                </h1>
+                <p class="mb-3 text-sm text-white">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                  est ex molestiae nobis!
+                </p>
+                <button
+                  class="outline-none w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                >
+                  Learn more
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="campuses" class="md:h-[80vh]">
+          <h1
+            class="w-full p-2 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
+          >
+            Campuses
+          </h1>
+          <div
+            id="campus-items"
+            class="lg:no-scrollbar mt-5 flex overflow-scroll overflow-x-scroll md:flex md:h-full"
+          >
+            <article
+              class="campus-trans relative h-64 min-w-full md:h-full md:w-full md:min-w-min md:hover:w-[300%]"
+              id="tup-manila-campus"
+            >
+              <a href="#">
+                <img
+                  src="./assets/school.jpg"
+                  alt="campus-item"
+                  class="absolute h-full w-full object-cover"
+                />
+                <div
+                  id="filter"
+                  class="absolute h-full w-full bg-black opacity-30"
+                ></div>
+                <div
+                  id="campus-item-text"
+                  class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                >
+                  <h1 class="font-oswald text-4xl">Manila</h1>
+                  <span class="font-sans">
+                    <p>tup@tup.edu.ph</p>
+                    <p>www.tup.edu.ph</p>
+                    <p>301.3001</p>
+                  </span>
+                </div>
+              </a>
+            </article>
+            <article
+              class="campus-trans relative h-64 min-w-full md:h-full md:w-full md:min-w-min md:hover:w-[300%]"
+              id="tup-cavite-campus"
+            >
+              <a href="https://www.tupcavite.edu.ph">
+                <img
+                  src="./assets/tup-cavite.jpg"
+                  alt="campus-item"
+                  class="absolute h-full w-full object-cover"
+                />
+                <div
+                  id="filter"
+                  class="absolute h-full w-full bg-black opacity-30"
+                ></div>
+                <div
+                  id="campus-item-text"
+                  class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                >
+                  <h1 class="font-oswald text-4xl">Cavite</h1>
+                  <span class="font-sans">
+                    <p>cavite@tup.edu.ph</p>
+                    <p>www.tupcavite.edu.ph</p>
+                    <p>416.4920</p>
+                  </span>
+                </div>
+              </a>
+            </article>
+            <article
+              class="campus-trans relative h-64 min-w-full md:h-full md:w-full md:min-w-min md:hover:w-[300%]"
+              id="tup-taguig-campus"
+            >
+              <a href="https://www.tupt.edu.ph">
+                <img
+                  src="./assets/tup-taguig.jpg"
+                  alt="campus-item"
+                  class="absolute h-full w-full object-cover"
+                />
+                <div
+                  id="filter"
+                  class="absolute h-full w-full bg-black opacity-30"
+                ></div>
+                <div
+                  id="campus-item-text"
+                  class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                >
+                  <h1 class="font-oswald text-4xl">Taguig</h1>
+                  <span class="font-sans">
+                    <p>taguig@tup.edu.ph</p>
+                    <p>www.tupt.edu.ph</p>
+                    <p>823.2457</p>
+                  </span>
+                </div>
+              </a>
+            </article>
+            <article
+              class="campus-trans relative h-64 min-w-full md:h-full md:w-full md:min-w-min md:hover:w-[300%]"
+              id="tup-visayas-campus"
+            >
+              <a href="https://www.tupvisayas.edu.ph">
+                <img
+                  src="./assets/tup-vis.jpg"
+                  alt="campus-item"
+                  class="absolute h-full w-full object-cover"
+                />
+                <div
+                  id="filter"
+                  class="absolute h-full w-full bg-black opacity-30"
+                ></div>
+                <div
+                  id="campus-item-text"
+                  class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
+                >
+                  <h1 class="font-oswald text-4xl">Visayas</h1>
+                  <span class="font-sans">
+                    <p>visayas@tup.edu.ph</p>
+                    <p>www.tupvisayas.edu.ph</p>
+                    <p>(034) 495 3480</p>
+                  </span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>
