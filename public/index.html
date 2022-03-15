@@ -331,16 +331,16 @@
         </div>
       </section>
 
-      <div class="grid grid-cols-1 grid-rows-2">
-        <section>
+      <div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+        <section class="px-2 md:px-10">
           <h1
-            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:px-20 md:text-left"
+            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:text-left"
           >
             University Calendar
           </h1>
-          <div class="px-2 md:px-20" id="table-pad">
+          <div id="table-pad">
             <table
-              class="w-full rounded-lg border border-gray-300 text-black lg:w-1/2"
+              class="w-full rounded-lg border border-gray-300 text-black lg:h-full"
             >
               <tr
                 class="box-border w-full bg-tup-red text-left font-oswald text-white"
@@ -367,57 +367,59 @@
             </table>
           </div>
         </section>
-        <section>
+        <section class="flex flex-col px-2 md:px-10">
           <h1
-            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:px-20 md:text-left"
+            class="mb-6 w-full p-2 text-center font-oswald text-4xl text-tup-red md:text-left"
           >
             Other information
           </h1>
-          <div class="px-2">
-            <div id="oi-tabs" class="flex overflow-hidden rounded-lg">
+          <div id="oi-body" class="flex h-full flex-col">
+            <div class="oi-tabs grid grid-cols-3 grid-rows-1">
               <button
-                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+                class="bg-tup-red py-3 font-oswald text-white opacity-100 hover:opacity-100 active:opacity-100"
               >
                 Important Links
               </button>
               <button
-                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
               >
-                Presidents Corner
+                Careers
               </button>
               <button
-                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
-              >
-                Career's
-              </button>
-              <button
-                class="w-full bg-tup-red text-white opacity-70 focus:opacity-100"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
               >
                 Downloads
               </button>
             </div>
-
-            <div id="oi-important-links" class="flex flex-col">
+            <div
+              id="oi-importantlinks"
+              class="grid h-full grid-cols-1 grid-rows-4 pt-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-2"
+            >
               <a
                 href="#"
-                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
-                >Faculty Access Module
+                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+              >
+                <i class="fa-solid fa-chalkboard-user fa-lg mr-6"></i>
+                Faculty access module
               </a>
               <a
                 href="#"
-                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
-                >Students Access Module
-              </a>
-              <a
-                href="#"
-                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
-                >Student Applicant Access Module</a
+                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                ><i class="fa-solid fa-graduation-cap fa-lg mr-6"></i> Student
+                access module</a
               >
               <a
                 href="#"
-                class="mt-2 h-full w-full rounded-lg border border-gray-300 p-4 active:bg-gray-200"
-                >Landbank E-payment portal
-              </a>
+                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                ><i class="fa-solid fa-book-open-reader fa-lg mr-6"></i> Student
+                Applicant access module</a
+              >
+              <a
+                href="#"
+                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                ><i class="fa-solid fa-money-check fa-lg mr-6"></i> Landbank
+                E-payment portal</a
+              >
             </div>
           </div>
         </section>
