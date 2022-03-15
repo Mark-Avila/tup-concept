@@ -746,15 +746,141 @@
       </div>
     </main>
 
-    <footer class="box-border flex flex-col bg-gray-900 pb-4">
-      <div id="footer-logo" class="flex w-full items-end justify-between p-8">
-        <img src="./assets/pilipinas.png" alt="ph-coa" class="h-20 w-20" />
-        <p class="inline p-4 text-center text-sm text-gray-500">
-          All content is in the public domain unless otherwise stated
-        </p>
-        <img src="./assets/tup-logo.png" alt="tup-logo" class="h-20 w-20" />
+    <footer
+      class="box-border flex flex-col bg-gray-900 pb-4 lg:flex-row lg:pt-12"
+    >
+      <div id="footer-logo" class="w-full lg:w-1/2">
+        <div
+          class="flex w-full items-end justify-between p-8 lg:items-start lg:justify-center lg:px-10 lg:py-0"
+        >
+          <img
+            src="./assets/pilipinas.png"
+            alt="ph-coa"
+            class="h-20 w-20 lg:mr-10 lg:h-28 lg:w-28"
+          />
+          <div class="flex flex-col items-center justify-center p-4 lg:hidden">
+            <h1 class="mb-2 font-oswald text-2xl text-white">
+              Haligi ng Bayan
+            </h1>
+            <p class="inline text-center text-sm text-gray-500 lg:hidden">
+              All content is in the public domain unless otherwise stated
+            </p>
+          </div>
+          <img
+            src="./assets/tup-logo.png"
+            alt="tup-logo"
+            class="h-20 w-20 lg:h-28 lg:w-28"
+          />
+        </div>
+        <div class="mt-6 hidden flex-col items-center justify-center lg:flex">
+          <h1 class="font-oswald text-2xl text-white">Haligi ng Bayan</h1>
+          <p class="block p-4 text-center text-sm text-gray-500">
+            All content is in the public domain<br />
+            unless otherwise stated
+          </p>
+        </div>
       </div>
-      <div id="footer-mobile-links" class="flex w-full flex-col text-gray-500">
+      <div
+        id="footer-desktop"
+        class="hidden w-full grid-cols-4 grid-rows-1 lg:grid"
+      >
+        <div id="footer-dt-popular">
+          <span>
+            <h1 class="font-oswald text-gray-400">Popular links</h1>
+          </span>
+          <div class="flex flex-col text-sm text-gray-500">
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >ERS</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Admission Results</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >News</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >About Us</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Contact Us</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Portal</a
+            >
+          </div>
+        </div>
+        <div id="footer-dt-academics">
+          <span>
+            <h1 class="font-oswald text-gray-400">Academics</h1>
+          </span>
+          <div class="flex flex-col text-sm text-gray-500">
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Courses</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Campuses</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Undergraduate</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Graduate</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Admissions</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Enrollment</a
+            >
+          </div>
+        </div>
+        <div id="footer-dt-govph">
+          <span>
+            <h1 class="font-oswald text-gray-400">About GovPh</h1>
+          </span>
+          <div class="flex flex-col text-sm text-gray-500">
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Official Gazette</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Open Data Portal</a
+            >
+          </div>
+        </div>
+        <div id="footer-dt-govlinks">
+          <span>
+            <h1 class="font-oswald text-gray-400">Government links</h1>
+          </span>
+          <div class="flex flex-col text-sm text-gray-500">
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Office of the President</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Office of the Vice President</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Senate of the Philippines</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >House of representatives</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Supreme Court</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Court of Appeals</a
+            >
+            <a href="#" class="mt-2 transition ease-in-out hover:text-gray-300"
+              >Sandiganbayan</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="footer-mobile-links"
+        class="flex w-full flex-col text-gray-500 lg:hidden"
+      >
         <button
           class="flex items-center justify-between py-2 px-8"
           onclick="openFooterLinks('popular')"
