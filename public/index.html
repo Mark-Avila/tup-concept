@@ -44,7 +44,7 @@
 
     <button
       id="nav-mobile-button"
-      class="fixed bottom-0 right-0 z-50 m-6 flex items-center justify-center rounded-full border-2 border-white bg-tup-red p-6 text-white lg:hidden"
+      class="fixed top-0 left-0 z-50 flex items-center justify-center rounded-full border-2 border-white bg-tup-red p-6 text-white lg:hidden"
       onclick="toggleMobileNav()"
     >
       <i class="fa-solid fa-bars fa-2x"></i>
@@ -88,7 +88,7 @@
       class="z-50 box-border hidden w-full lg:absolute lg:grid lg:grid-cols-2 lg:px-16 lg:pt-4"
     >
       <div class="flex items-center">
-        <img src="tup-logo.png" alt="tup-logo" class="h-16 w-16" />
+        <img src="./assets/tup-logo.png" alt="tup-logo" class="h-16 w-16" />
         <h1 class="ml-4 font-oswald text-lg text-white">
           Technological University<br />
           of the Philippines
@@ -623,7 +623,7 @@
           </div>
         </section>
 
-        <section id="campuses" class="md:h-[80vh]">
+        <section id="campuses" class="flex flex-col md:h-[90vh]">
           <h1
             class="w-full p-2 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
           >
@@ -745,5 +745,136 @@
         </section>
       </div>
     </main>
+
+    <footer class="box-border flex flex-col bg-gray-900 pb-4">
+      <div id="footer-logo" class="flex w-full items-end justify-between p-8">
+        <img src="./assets/pilipinas.png" alt="ph-coa" class="h-20 w-20" />
+        <p class="inline p-4 text-center text-sm text-gray-500">
+          All content is in the public domain unless otherwise stated
+        </p>
+        <img src="./assets/tup-logo.png" alt="tup-logo" class="h-20 w-20" />
+      </div>
+      <div id="footer-mobile-links" class="flex w-full flex-col text-gray-500">
+        <button
+          class="flex items-center justify-between py-2 px-8"
+          onclick="openFooterLinks('popular')"
+        >
+          Popular links
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          id="footer-popular"
+          class="hidden flex-col bg-gray-800 text-gray-400"
+        >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700">ERS</a>
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Admission Results</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700">News</a>
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >About Us</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Contact Us</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Portal</a
+          >
+        </div>
+
+        <button
+          class="flex items-center justify-between py-2 px-8"
+          onclick="openFooterLinks('academics')"
+        >
+          Academics
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          id="footer-academics"
+          class="hidden flex-col bg-gray-800 text-gray-400"
+        >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Courses Offered</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Campuses</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700">News</a>
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Undergraduate</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Graduate</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Admissions</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Enrollment</a
+          >
+        </div>
+
+        <button
+          class="flex items-center justify-between py-2 px-8"
+          onclick="openFooterLinks('govph')"
+        >
+          About GovPH
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          id="footer-govph"
+          class="hidden flex-col bg-gray-800 text-gray-400"
+        >
+          <p class="px-8 py-2 text-gray-500">
+            Learn more about the Philippine government, its structure, how
+            government works and the people behind it
+          </p>
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Official Gazette</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Open Data Portal</a
+          >
+        </div>
+
+        <button
+          class="flex items-center justify-between py-2 px-8"
+          onclick="openFooterLinks('govlinks')"
+        >
+          Government links
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          id="footer-govlinks"
+          class="hidden flex-col bg-gray-800 text-gray-400"
+        >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Office of the President</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Office of the Vice President</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Senate of the Philippines</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >House of Representatives</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Supreme Court</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Court of Appeals</a
+          >
+          <a href="#" class="block w-full px-8 py-2 hover:bg-gray-700"
+            >Sandiganbayan</a
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
