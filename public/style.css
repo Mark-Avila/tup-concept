@@ -998,6 +998,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1170,8 +1175,23 @@ video {
   transform: var(--tw-transform);
 }
 
+.active\:bg-tup-dark:active {
+  --tw-bg-opacity: 1;
+  background-color: rgba(89, 12, 25, var(--tw-bg-opacity));
+}
+
 .active\:opacity-100:active {
   opacity: 1;
+}
+
+.active\:brightness-90:active {
+  --tw-brightness: brightness(.9);
+  filter: var(--tw-filter);
+}
+
+.active\:brightness-50:active {
+  --tw-brightness: brightness(.5);
+  filter: var(--tw-filter);
 }
 
 @media (min-width: 768px) {
