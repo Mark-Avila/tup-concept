@@ -735,6 +735,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -745,10 +749,6 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .box-border {
@@ -799,36 +799,12 @@ video {
   height: 16rem;
 }
 
-.h-\[90vh\] {
-  height: 90vh;
-}
-
 .h-24 {
   height: 6rem;
 }
 
 .h-20 {
   height: 5rem;
-}
-
-.h-\[95vh\] {
-  height: 95vh;
-}
-
-.h-\[96vh\] {
-  height: 96vh;
-}
-
-.h-72 {
-  height: 18rem;
-}
-
-.h-\[80vh\] {
-  height: 80vh;
-}
-
-.h-32 {
-  height: 8rem;
 }
 
 .w-full {
@@ -1281,10 +1257,6 @@ video {
     margin-bottom: 0px;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -1297,16 +1269,16 @@ video {
     display: none;
   }
 
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
   .md\:h-\[90vh\] {
     height: 90vh;
   }
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-\[80vh\] {
-    height: 80vh;
   }
 
   .md\:w-full {
@@ -1353,11 +1325,6 @@ video {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .md\:hover\:w-\[300\%\]:hover {
@@ -1422,20 +1389,12 @@ video {
     height: 12rem;
   }
 
-  .lg\:h-28 {
-    height: 7rem;
-  }
-
-  .lg\:h-\[80vh\] {
-    height: 80vh;
-  }
-
-  .lg\:h-\[90vh\] {
-    height: 90vh;
-  }
-
   .lg\:h-32 {
     height: 8rem;
+  }
+
+  .lg\:h-28 {
+    height: 7rem;
   }
 
   .lg\:w-48 {

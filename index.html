@@ -598,35 +598,38 @@
             </arcticle>
           </div>
 
-          <div id="colleges-items-desktop" class="h-full grid-cols-12 hidden md:grid">
-            <div class="flex items-center justify-center">
+          <div class="grid h-full grid-cols-12">
+            <div class="items-center justify-center hidden md:flex">
               <button
-                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+              onclick="renderCollegeItem('left')"  
+              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-left fa-2xl"></i>
               </button>
             </div>
-            <div 
-              class="col-span-10 flex-col items-center md:flex"
+            <div
+              class="col-span-10 hidden flex-col items-center md:flex h-full"
             >
               <article class="grid h-full grid-cols-12">
                 <div class="relative col-span-5 h-full">
                   <img
                     src="./assets/coe.jpg"
                     alt="college-item-pic"
+                    id="college-item-pic"
                     class="absolute h-full w-full object-cover brightness-75"
                   />
                   <img
                     src="./assets/coe-logo.png"
                     alt="college-item-logo"
+                    id="college-item-logo"
                     class="absolute bottom-0 left-0 m-4 h-24 lg:h-32"
                   />
                 </div>
                 <div
                   class="col-span-7 ml-4 border-l-2 border-white pl-4 text-white flex flex-col"
                 >
-                  <h1 class="font-oswald text-2xl">College of Engineering</h1>
-                  <p class="mt-4 text-justify">
+                  <h1 id="college-item-name" class="font-oswald text-3xl">College of Engineering</h1>
+                  <p id="college-item-desc" class="mt-4 text-justify">
                     The College of Engineering (COE) is a recipient of Center of
                     Development (COD) status from the Commission on Higher
                     Education (CHED). The College produces total quality
@@ -634,7 +637,7 @@
                     researches for industry and society to maximally contribute
                     to national development.
                   </p>
-                  <ol class="text-sm mt-auto">
+                  <ol id="college-item-goal" class="text-sm mt-auto">
                     <li>
                       <b>1.</b> Offer technology-oriented curricula in
                       engineering and management leading to the Bachelor,
@@ -657,9 +660,10 @@
                 </div>
               </article>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="items-center justify-center hidden md:flex">
               <button
-                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+              onclick="renderCollegeItem('right')"    
+              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-right fa-2xl"></i>
               </button>
