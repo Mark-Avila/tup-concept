@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./public/**/*.html", "./src/**/*.html", "./src/**/*.js"],
+  purge: ["./public/**/*.html", "./src/**/*.html", "./src/**/*.js", "index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -10,9 +10,6 @@ module.exports = {
       },
       fontFamily: {
         oswald: "'Oswald', serif",
-      },
-      backgroundImage: {
-        "layer-pattern": "url('../public/assets/layered-waves-haikei.svg')",
       },
     },
   },

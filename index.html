@@ -460,172 +460,220 @@
       </div>
 
       <div class="mt-10 box-border bg-tup-red">
-        <section id="colleges" class="p-2 md:px-10 lg:px-20">
+        <section id="colleges" class="flex md:h-[80vh] flex-col md:px-10 lg:px-20">
           <h1
-            class="mt-4 mb-10 w-full text-center font-oswald text-4xl text-white md:text-left"
+            class="mb-8 w-full pt-8 text-center font-oswald text-4xl text-white md:text-left"
           >
             Colleges
           </h1>
           <div
-            id="college-items"
-            class="md lg:no-scrollbar flex overflow-scroll overflow-x-scroll lg:grid lg:grid-cols-2 lg:gap-2"
+            id="colleges-items-mobile"
+            class="flex overflow-scroll overflow-x-scroll md:hidden"
           >
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/coe.jpg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Engineering
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+            <arcticle id="college-item-coe" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/coe.jpg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/cos.jpg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Science
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-nonemd:ml-auto m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                  <img
+                    src="./assets/coe-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Engineering
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+            <arcticle id="college-item-cos" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/cos.jpg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/coie.jpeg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Industrial Education
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-none m w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                  <img
+                    src="./assets/cos-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Science
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+            <arcticle id="college-item-cafa" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/cofa.jpg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/cola.jpg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Liberal Arts
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                  <img
+                    src="./assets/cafa-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Fine Arts
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+            <arcticle id="college-item-cit" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/cit.jpg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/cit.jpg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Industrial Technology
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-nonemd:ml-auto w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                  <img
+                    src="./assets/cit-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Industrial Technology
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+            <arcticle id="college-item-cla" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/cola.jpg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
-            <article
-              class="mr-2 min-w-full overflow-hidden rounded-md bg-tup-dark bg-opacity-50 md:flex md:h-64"
-            >
-              <img
-                src="./assets/cofa.jpg"
-                alt="college-pic"
-                class="h-64 w-full object-cover md:h-full md:w-48"
-              />
-              <div
-                class="w-full p-3 text-center md:flex md:flex-col md:justify-between md:p-6 md:text-left"
-              >
-                <h1 class="mb-3 font-oswald text-xl text-white md:text-2xl">
-                  College of Architecture and Fine Arts
-                </h1>
-                <p class="mb-3 text-sm text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                  est ex molestiae nobis!
-                </p>
-                <button
-                  class="outline-none w-full rounded-md border-2 border-white py-3 font-oswald text-lg text-white transition ease-in-out hover:bg-white hover:text-black active:scale-95 md:p-2"
+                  <img
+                    src="./assets/cla-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Liberal Arts
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+            <arcticle id="college-item-cie" class="relative h-64 min-w-full">
+              <a href="#">
+                <img
+                  src="./assets/coie.jpeg"
+                  alt="college-item-pic"
+                  class="absolute h-full w-full object-cover brightness-50"
+                />
+                <span
+                  class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
                 >
-                  Learn more
-                </button>
-              </div>
-            </article>
+                  <img
+                    src="./assets/cie-logo.png"
+                    alt="college-item-logo"
+                    class="w-28"
+                  />
+                  <h1 class="font-oswald text-3xl text-white">
+                    College of Industrial Education
+                  </h1>
+                </span>
+              </a>
+            </arcticle>
+          </div>
+
+          <div class="grid h-full grid-cols-12">
+            <div class="items-center justify-center hidden md:flex">
+              <button
+              onclick="renderCollegeItem('left')"  
+              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+              >
+                <i class="fa-solid fa-angle-left fa-2xl"></i>
+              </button>
+            </div>
+            <div
+              class="col-span-10 hidden flex-col items-center md:flex h-full"
+            >
+              <article class="grid h-full grid-cols-12">
+                <div class="relative col-span-5 h-full">
+                  <img
+                    src="./assets/coe.jpg"
+                    alt="college-item-pic"
+                    id="college-item-pic"
+                    class="absolute h-full w-full object-cover brightness-75"
+                  />
+                  <img
+                    src="./assets/coe-logo.png"
+                    alt="college-item-logo"
+                    id="college-item-logo"
+                    class="absolute bottom-0 left-0 m-4 h-24 lg:h-32"
+                  />
+                </div>
+                <div
+                  class="col-span-7 ml-4 border-l-2 border-white pl-4 text-white flex flex-col"
+                >
+                  <h1 id="college-item-name" class="font-oswald text-3xl">College of Engineering</h1>
+                  <p id="college-item-desc" class="mt-4 text-justify">
+                    The College of Engineering (COE) is a recipient of Center of
+                    Development (COD) status from the Commission on Higher
+                    Education (CHED). The College produces total quality
+                    engineers, graduate professionals and valuable technology
+                    researches for industry and society to maximally contribute
+                    to national development.
+                  </p>
+                  <ol id="college-item-goal" class="text-sm mt-auto">
+                    <li>
+                      <b>1.</b> Offer technology-oriented curricula in
+                      engineering and management leading to the Bachelor,
+                      Master, and Doctorate degrees.
+                    </li>
+                    <li>
+                      <b>2.</b> Foster and promote scientific culture through
+                      research and development involvement and collaboration.
+                    </li>
+                    <li>
+                      <b>3.</b> Foster, promote, and maintain close
+                      inter-institutional and academe-industry linkages.
+                    </li>
+                    <li>
+                      <b>4.</b> Effect technology transfer through the Office of
+                      Research and Extension Services of the University and the
+                      College.
+                    </li>
+                  </ol>
+                </div>
+              </article>
+            </div>
+            <div class="items-center justify-center hidden md:flex">
+              <button
+              onclick="renderCollegeItem('right')"    
+              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+              >
+                <i class="fa-solid fa-angle-right fa-2xl"></i>
+              </button>
+            </div>
           </div>
         </section>
 
         <section id="campuses" class="flex flex-col md:h-[90vh]">
           <h1
-            class="w-full p-2 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
+            class="w-full px-2 pt-8 pb-8 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
           >
             Campuses
           </h1>
