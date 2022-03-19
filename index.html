@@ -466,10 +466,10 @@
           >
             Colleges
           </h1>
-          <div id="colleges-items" class="flex overflow-scroll overflow-x-scroll w">
+          <div id="colleges-items-mobile" class="flex overflow-scroll overflow-x-scroll md:hidden">
             <arcticle id="college-item-coe" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/coe.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/coe.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover"/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/coe-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Engineering</h1>
@@ -478,7 +478,7 @@
             </arcticle>
             <arcticle id="college-item-cos" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/cos.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/cos.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover"/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/cos-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Science</h1>
@@ -487,7 +487,7 @@
             </arcticle>
             <arcticle id="college-item-cafa" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/cofa.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/cofa.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover "/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/cafa-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Fine Arts</h1>
@@ -496,7 +496,7 @@
             </arcticle>
             <arcticle id="college-item-cit" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/cit.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/cit.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover"/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/cit-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Industrial Technology</h1>
@@ -505,7 +505,7 @@
             </arcticle>
             <arcticle id="college-item-cla" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/cola.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/cola.jpg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover "/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/cla-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Liberal Arts</h1>
@@ -514,13 +514,40 @@
             </arcticle>
             <arcticle id="college-item-cie" class="relative h-64 min-w-full">
               <a href="#">
-                <img src="./assets/coie.jpeg" alt="college-item-pic" class="absolute w-full h-full brightness-50"/>
+                <img src="./assets/coie.jpeg" alt="college-item-pic" class="absolute w-full h-full brightness-50 object-cover"/>
                 <span class="absolute w-full h-full flex flex-col justify-between px-4 py-8">
                   <img src="./assets/cie-logo.png" alt="college-item-logo" class="w-28"/>
                   <h1 class="font-oswald text-white text-3xl">College of Industrial Education</h1>
                 </span>
               </a>
             </arcticle>
+          </div>
+
+          <div class="grid grid-cols-12">
+            <div class="flex justify-center items-center">
+              <button class="text-white hover:text-black hover:bg-white p-4 px-5 rounded-full active:scale-90 transition ease-in-out"><i class="fa-solid fa-angle-left fa-2xl"></i></button>
+            </div>
+            <div id="colleges-items-desktop " class="col-span-10 hidden md:block ">
+              <article class="grid grid-cols-12">
+                <div class="col-span-5 h-full relative">
+                  <img src="./assets/coe.jpg" alt="college-item-pic" class="absolute object-cover h-full w-full"/>
+                  <img src="./assets/coe-logo.png" alt="college-item-logo" class="absolute h-24 bottom-0 left-0 m-4"/>
+                </div>
+                <div class="col-span-7 text-white ml-4 pl-4 border-l-2 border-white">
+                  <h1 class="font-oswald text-2xl">College of Engineering</h1>
+                  <p class="text-sm pt-2">The College of Engineering (COE) is a recipient of Center of Development (COD) status from the Commission on Higher Education (CHED)..</p>
+                  <ol class="text-sm">
+                    <li><b>1.</b> Offer technology-oriented curricula in engineering and management leading to the Bachelor, Master, and Doctorate degrees.</li>
+                    <li><b>2.</b> Foster and promote scientific culture through research and development involvement and collaboration.</li>
+                    <li><b>3.</b> Foster, promote, and maintain close inter-institutional and academe-industry linkages.</li>
+                    <li><b>4.</b> Effect technology transfer through the Office of Research and Extension Services of the University and the College.</li>
+                  </ol>
+                  </div>
+              </article>
+            </div>
+            <div class="flex justify-center items-center">
+              <button class="text-white hover:text-black hover:bg-white p-4 px-5 rounded-full active:scale-90 transition ease-in-out"><i class="fa-solid fa-angle-right fa-2xl"></i></button>
+            </div>
           </div>
 
         </section>
