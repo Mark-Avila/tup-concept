@@ -1146,10 +1146,6 @@ video {
   opacity: 0.7;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .opacity-80 {
   opacity: 0.8;
 }
@@ -1229,6 +1225,10 @@ video {
   opacity: 1;
 }
 
+.focus\:opacity-100:focus {
+  opacity: 1;
+}
+
 .active\:scale-90:active {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
@@ -1238,10 +1238,6 @@ video {
 .active\:bg-tup-dark:active {
   --tw-bg-opacity: 1;
   background-color: rgba(89, 12, 25, var(--tw-bg-opacity));
-}
-
-.active\:opacity-100:active {
-  opacity: 1;
 }
 
 @media (min-width: 768px) {

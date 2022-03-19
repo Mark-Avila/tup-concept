@@ -376,91 +376,102 @@
           <div id="oi-body" class="flex h-full flex-col">
             <div class="oi-tabs grid grid-cols-3 grid-rows-1">
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-100 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('important')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Important Links
               </button>
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('careers')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Careers
               </button>
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('downloads')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Downloads
               </button>
             </div>
-            <div
-              id="oi-importantlinks"
-              class="hidden h-full grid-cols-1 grid-rows-4 pt-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-2"
-            >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+            <span id="oi-current-tab" class="flex h-full flex-col">
+              <div
+                id="oi-importantlinks"
+                class="hidden h-full grid-cols-1 grid-rows-4 pt-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-2"
               >
-                <i class="fa-solid fa-chalkboard-user fa-lg mr-6"></i>
-                Faculty access module
-              </a>
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-graduation-cap fa-lg mr-6"></i> Student
-                access module</a
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                >
+                  <i class="fa-solid fa-chalkboard-user fa-lg mr-6"></i>
+                  Faculty access module
+                </a>
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-graduation-cap fa-lg mr-6"></i> Student
+                  access module</a
+                >
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-book-open-reader fa-lg mr-6"></i>
+                  Student Applicant access module</a
+                >
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-money-check fa-lg mr-6"></i> Landbank
+                  E-payment portal</a
+                >
+              </div>
+              <div id="oi-careers" class="grid h-full grid-cols-1 grid-rows-4">
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Administrative Aide VI - Clerk III</a
+                >
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Administrative Officer V - Cashier III</a
+                >
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Statistician I</a
+                >
+                <a
+                  id="oi-careers-readmore"
+                  href="#"
+                  class="flex items-center justify-center bg-tup-red text-white active:bg-tup-dark"
+                  >Click here for more</a
+                >
+              </div>
+              <div
+                id="oi-downloads"
+                class="hidden h-full grid-cols-1 grid-rows-4"
               >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-book-open-reader fa-lg mr-6"></i> Student
-                Applicant access module</a
-              >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-money-check fa-lg mr-6"></i> Landbank
-                E-payment portal</a
-              >
-            </div>
-            <div id="oi-careers" class="hidden h-full grid-cols-1 grid-rows-4">
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Administrative Aide VI - Clerk III</a
-              >
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Administrative Officer V - Cashier III</a
-              >
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Statistician I</a
-              >
-              <a
-                id="oi-careers-readmore"
-                href="#"
-                class="flex items-center justify-center bg-tup-red text-white active:bg-tup-dark"
-                >Click here for more</a
-              >
-            </div>
-            <div id="oi-downloads" class="grid h-full grid-cols-1 grid-rows-4">
-              <a
-                href="#"
-                class="flex items-center justify-between border border-gray-300 px-2 hover:bg-gray-200"
-              >
-                TUP Student Handbook
-                <span>
-                  <i class="fa-solid fa-circle-down fa-lg"></i>
-                </span>
-              </a>
-            </div>
+                <a
+                  href="#"
+                  class="flex items-center justify-between border border-gray-300 px-2 hover:bg-gray-200"
+                >
+                  TUP Student Handbook
+                  <span>
+                    <i class="fa-solid fa-circle-down fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+            </span>
           </div>
         </section>
       </div>
 
       <div class="mt-10 box-border bg-tup-red">
-        <section id="colleges" class="flex md:h-[80vh] flex-col md:px-10 lg:px-20">
+        <section
+          id="colleges"
+          class="flex flex-col md:h-[80vh] md:px-10 lg:px-20"
+        >
           <h1
             class="mb-8 w-full pt-8 text-center font-oswald text-4xl text-white md:text-left"
           >
@@ -599,16 +610,16 @@
           </div>
 
           <div class="grid h-full grid-cols-12">
-            <div class="items-center justify-center hidden md:flex">
+            <div class="hidden items-center justify-center md:flex">
               <button
-              onclick="renderCollegeItem('left')"  
-              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+                onclick="renderCollegeItem('left')"
+                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-left fa-2xl"></i>
               </button>
             </div>
             <div
-              class="col-span-10 hidden flex-col items-center md:flex h-full"
+              class="col-span-10 hidden h-full flex-col items-center md:flex"
             >
               <article class="grid h-full grid-cols-12">
                 <div class="relative col-span-5 h-full">
@@ -626,9 +637,11 @@
                   />
                 </div>
                 <div
-                  class="col-span-7 ml-4 border-l-2 border-white pl-4 text-white flex flex-col"
+                  class="col-span-7 ml-4 flex flex-col border-l-2 border-white pl-4 text-white"
                 >
-                  <h1 id="college-item-name" class="font-oswald text-3xl">College of Engineering</h1>
+                  <h1 id="college-item-name" class="font-oswald text-3xl">
+                    College of Engineering
+                  </h1>
                   <p id="college-item-desc" class="mt-4 text-justify">
                     The College of Engineering (COE) is a recipient of Center of
                     Development (COD) status from the Commission on Higher
@@ -637,7 +650,7 @@
                     researches for industry and society to maximally contribute
                     to national development.
                   </p>
-                  <ol id="college-item-goal" class="text-sm mt-auto">
+                  <ol id="college-item-goal" class="mt-auto text-sm">
                     <li>
                       <b>1.</b> Offer technology-oriented curricula in
                       engineering and management leading to the Bachelor,
@@ -660,10 +673,10 @@
                 </div>
               </article>
             </div>
-            <div class="items-center justify-center hidden md:flex">
+            <div class="hidden items-center justify-center md:flex">
               <button
-              onclick="renderCollegeItem('right')"    
-              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+                onclick="renderCollegeItem('right')"
+                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-right fa-2xl"></i>
               </button>
