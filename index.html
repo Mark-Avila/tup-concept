@@ -148,10 +148,7 @@
     </nav>
 
     <header class="relative top-0 z-30 h-[50vh] w-full lg:h-[96vh]">
-      <img
-        id="header-img"
-        class="h-full w-full object-cover"
-      />
+      <img id="header-img" class="h-full w-full object-cover" />
       <div
         id="image-filter"
         class="absolute top-0 h-full w-full bg-black opacity-50"
@@ -159,12 +156,16 @@
 
       <div
         id="header-body"
-        class="absolute top-0 left-0 h-full w-full p-6 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
+        class="absolute top-0 left-0 h-full w-full p-6 pr-28 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
       >
         <div id="header-text">
-          <a href="#" id="header-title" class="font-oswald text-2xl lg:text-4xl">
+          <p class="font-roboto opacity-70 lg:text-2xl">Announcements</p>
+          <a
+            href="#"
+            id="header-title"
+            class="font-oswald text-2xl lg:text-4xl"
+          >
           </a>
-          <p class="font-sans opacity-70 lg:text-2xl"></p>
         </div>
         <div id="indicator" class="hidden items-center text-white lg:flex">
           <div class="mx-1">
@@ -201,7 +202,7 @@
 
     <nav
       id="quick-links"
-      class="flex items-center justify-between bg-tup-red py-4 px-3 font-sans text-white lg:m-10 lg:grid lg:grid-cols-2 lg:rounded-full lg:px-12 lg:shadow-lg"
+      class="flex items-center justify-between bg-tup-red py-4 px-3 font-roboto text-white lg:m-10 lg:grid lg:grid-cols-2 lg:rounded-full lg:px-12 lg:shadow-lg"
     >
       <span class="hidden lg:block">
         <h1 class="font-bold">Quick links</h1>
@@ -476,7 +477,7 @@
           class="flex flex-col md:h-[80vh] md:px-10 lg:px-20"
         >
           <h1
-            class="mb-8 w-full pt-8 text-center font-oswald text-4xl text-white md:text-left"
+            class="w-full border-none border-white py-8 text-center font-oswald text-4xl text-white md:mb-8 md:border-b-4 md:border-solid md:text-5xl"
           >
             Colleges
           </h1>
@@ -701,12 +702,14 @@
           </div>
         </section>
 
-        <section id="campuses" class="flex flex-col md:h-[90vh]">
-          <h1
-            class="w-full px-2 pt-8 pb-8 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
-          >
-            Campuses
-          </h1>
+        <section id="campuses" class="flex flex-col md:mt-28 md:h-[95vh]">
+          <span class="px-8 md:px-10 lg:px-20">
+            <h1
+              class="w-full border-none border-white px-2 pt-8 pb-8 text-center font-oswald text-4xl text-white md:mb-8 md:border-solid md:px-20 md:text-5xl md:border-b-4"
+            >
+              Campuses
+            </h1>
+          </span>
           <div
             id="campus-items"
             class="lg:no-scrollbar mt-5 flex overflow-scroll overflow-x-scroll md:flex md:h-full"
@@ -731,7 +734,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Manila</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>tup@tup.edu.ph</p>
                     <p>www.tup.edu.ph</p>
                     <p>301.3001</p>
@@ -759,7 +762,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Cavite</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>cavite@tup.edu.ph</p>
                     <p>www.tupcavite.edu.ph</p>
                     <p>416.4920</p>
@@ -787,7 +790,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Taguig</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>taguig@tup.edu.ph</p>
                     <p>www.tupt.edu.ph</p>
                     <p>823.2457</p>
@@ -815,7 +818,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Visayas</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>visayas@tup.edu.ph</p>
                     <p>www.tupvisayas.edu.ph</p>
                     <p>(034) 495 3480</p>
