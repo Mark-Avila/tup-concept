@@ -93,6 +93,37 @@ let headerItems = [
   },  
 ]
 
+const coreValues = [
+  {
+    letter: "T",
+    text: "Transparent and participatory governance",
+  },
+  {
+    letter: "U",
+    text: "Unity in the pursuit of TUP mission, goals, and objectives",
+  },
+  {
+    letter: "P",
+    text: "Professionalism in the discharge of quality service",
+  },
+  {
+    letter: "I",
+    text: "Integrity and commitment to maintain the good name of the University",
+  },
+  {
+    letter: "A",
+    text: "Accountability for individual and organizational quality performance",
+  },
+  {
+    letter: "N",
+    text: "Nationalism through tangible contribution to the rapid economic growth of the country",
+  },
+  {
+    letter: "S",
+    text: "Shared responsibility, hardwork, and resourcefulness in compliance to the mandates of the university"
+  },
+]
+
 function toggleMobileNav() {
   let mobileNav = document.querySelector("#mobile-nav");
   let state = window.getComputedStyle(mobileNav, null).display;
@@ -241,9 +272,7 @@ function switchHeader(direction) {
   } else if (displayIndex < 0) {
     displayIndex = 3;
   }
-
-  console.log(displayIndex);
-
+  
   headerImg.src = headerItems[displayIndex].img;
   headerTitleAndLink.textContent = headerItems[displayIndex].title;
   headerTitleAndLink.setAttribute("href", headerItems[displayIndex].to);
@@ -258,4 +287,13 @@ function switchHeader(direction) {
       data.classList.add("fa-circle-notch");
     }
   })
+}
+
+function switchCoreValue(letter) {
+  let displayText = coreValues.find(data => data.letter === letter);
+  displayText = displayText.text;
+
+  let cvDef = document.querySelector("#cv-definition");
+
+  cvDef.textContent = displayText;
 }
