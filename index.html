@@ -16,13 +16,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-
     <script src="./index.js"></script>
 
     <title>TUP Website</title>
   </head>
-  <body>
+  <body onload="switchHeader('right')">
     <nav id="upper-nav" class="hidden w-full bg-gray-800 lg:block">
       <ul
         class="flex list-none justify-evenly py-4 text-gray-400 lg:justify-end lg:px-16 lg:py-2 lg:text-sm"
@@ -151,7 +149,7 @@
 
     <header class="relative top-0 z-30 h-[50vh] w-full lg:h-[96vh]">
       <img
-        src="https://manilatoday.net/wp-content/uploads/2020/03/tup-usg-5-1400x1050.jpg"
+        id="header-img"
         class="h-full w-full object-cover"
       />
       <div
@@ -164,29 +162,29 @@
         class="absolute top-0 left-0 h-full w-full p-6 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
       >
         <div id="header-text">
-          <h1 class="font-oswald text-2xl lg:text-4xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h1>
-          <p class="font-sans opacity-70 lg:text-2xl">Announcements</p>
+          <a href="#" id="header-title" class="font-oswald text-2xl lg:text-4xl">
+          </a>
+          <p class="font-sans opacity-70 lg:text-2xl"></p>
         </div>
         <div id="indicator" class="hidden items-center text-white lg:flex">
           <div class="mx-1">
-            <i class="fa-solid fa-circle"></i>
+            <i id="circle-1" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-2" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-3" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-4" class="fa-solid fa-circle-notch"></i>
           </div>
         </div>
       </div>
 
       <button
         id="carousel-left-toggle"
+        onclick="switchHeader('left')"
         class="outline-none absolute top-1/2 left-0 ml-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-left fa-2xl"></i>
@@ -194,6 +192,7 @@
 
       <button
         id="carousel-right-toggle"
+        onclick="switchHeader('right')"
         class="outline-none absolute top-1/2 right-0 mr-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-right fa-2xl"></i>
@@ -238,6 +237,7 @@
                 src="./assets/torres-desk.jpg"
                 alt="tup-president"
                 class="h-full w-full object-cover lg:h-48 lg:w-48 lg:rounded-full"
+                loading="lazy"
               />
             </div>
             <div
@@ -266,6 +266,7 @@
                   src="./assets/gearhawks.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -290,6 +291,7 @@
                   src="./assets/mpei.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -313,6 +315,7 @@
                   src="./assets/school.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -487,6 +490,7 @@
                   src="./assets/coe.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -495,6 +499,7 @@
                     src="./assets/coe-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Engineering
@@ -508,6 +513,7 @@
                   src="./assets/cos.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -516,6 +522,7 @@
                     src="./assets/cos-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Science
@@ -529,6 +536,7 @@
                   src="./assets/cofa.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -537,6 +545,7 @@
                     src="./assets/cafa-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Fine Arts
@@ -550,6 +559,7 @@
                   src="./assets/cit.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -558,6 +568,7 @@
                     src="./assets/cit-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Industrial Technology
@@ -571,6 +582,7 @@
                   src="./assets/cola.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -579,6 +591,7 @@
                     src="./assets/cla-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Liberal Arts
@@ -592,6 +605,7 @@
                   src="./assets/coie.jpeg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -600,6 +614,7 @@
                     src="./assets/cie-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Industrial Education
@@ -628,12 +643,14 @@
                     alt="college-item-pic"
                     id="college-item-pic"
                     class="absolute h-full w-full object-cover brightness-75"
+                    loading="lazy"
                   />
                   <img
                     src="./assets/coe-logo.png"
                     alt="college-item-logo"
                     id="college-item-logo"
                     class="absolute bottom-0 left-0 m-4 h-24 lg:h-32"
+                    loading="lazy"
                   />
                 </div>
                 <div
@@ -703,6 +720,7 @@
                   src="./assets/school.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -730,6 +748,7 @@
                   src="./assets/tup-cavite.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -757,6 +776,7 @@
                   src="./assets/tup-taguig.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -784,6 +804,7 @@
                   src="./assets/tup-vis.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -818,6 +839,7 @@
             src="./assets/pilipinas.png"
             alt="ph-coa"
             class="h-20 w-20 lg:mr-10 lg:h-28 lg:w-28"
+            loading="lazy"
           />
           <div class="flex flex-col items-center justify-center p-4 lg:hidden">
             <h1 class="mb-2 font-oswald text-2xl text-white">
@@ -831,6 +853,7 @@
             src="./assets/tup-logo.png"
             alt="tup-logo"
             class="h-20 w-20 lg:h-28 lg:w-28"
+            loading="lazy"
           />
         </div>
         <div class="mt-6 hidden flex-col items-center justify-center lg:flex">

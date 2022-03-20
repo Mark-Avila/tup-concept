@@ -1,3 +1,4 @@
+
 const collegeItems = [
   {
     pic: "./assets/coe.jpg",
@@ -69,6 +70,29 @@ const collegeItems = [
   },
 ];
 
+let headerItems = [
+  {
+    title: "TUP Manila holds first student rally in campus",
+    img: "./assets/header-1.jpg",
+    to: "https://manilatoday.net/tup-manila-holds-first-student-rally-in-campus/"
+  },  
+  {
+    title: "Revised guidelines on the conduct of online classes in the University",
+    img: "./assets/header-2.jpeg",
+    to: "https://drive.google.com/file/d/1MN3e_lkbJnvHNu-r3yM94gD1rszwr_GN/view?usp=sharing"
+  },  
+  {
+    title: "Online request of credentials/documents",
+    img: "./assets/header-3.jpg",
+    to: "https://docs.google.com/forms/d/e/1FAIpQLScx7Olc4n2csf-M4HTiYFAcMwfdJ2ccLJS7PJwK4FlMIGPj0w/viewform"
+  },  
+  {
+    title: "TUP-M, now ISO 9001:2015 Certified!",
+    img: "./assets/header-4.jpg",
+    to: "http://www.tup.edu.ph/#"
+  },  
+]
+
 function toggleMobileNav() {
   let mobileNav = document.querySelector("#mobile-nav");
   let state = window.getComputedStyle(mobileNav, null).display;
@@ -129,6 +153,21 @@ function determineCollegeIndex() {
   return index;
 }
 
+function determineHeaderIndex() {
+  let headerName = document.querySelector("#header-title").textContent;
+
+  let index = 0;
+
+  for (let i = 0; i < headerItems.length; i++) {
+    if (headerItems[i].title === headerName) {
+      index = i;
+      break;
+    }
+  }
+
+  return index;
+}
+
 function renderCollegeItem(direction) {
   let collegePic = document.querySelector("#college-item-pic");
   let collegeLogo = document.querySelector("#college-item-logo");
@@ -162,9 +201,6 @@ function renderCollegeItem(direction) {
 }
 
 function switchTabs(tabName) {
-
-  let content = document.querySelector("#oi-current-tab")
-
   let impLinks = document.querySelector("#oi-importantlinks");
   let careers = document.querySelector("#oi-careers");
   let downloads = document.querySelector("#oi-downloads");
@@ -184,4 +220,42 @@ function switchTabs(tabName) {
     careers.style.display = "none";
     downloads.style.display = "grid";
   }
+}
+
+function switchHeader(direction) {
+  let headerImg = document.querySelector("#header-img");
+  let headerTitleAndLink = document.querySelector("#header-title");
+
+  let circle1 = document.querySelector("#circle-1");
+  let circle2 = document.querySelector("#circle-2");
+  let circle3 = document.querySelector("#circle-3");
+  let circle4 = document.querySelector("#circle-4");
+
+  let circles = [circle1, circle2, circle3, circle4];
+
+  let currentIndex = determineHeaderIndex();
+  let displayIndex = currentIndex + (direction === "left" ? -1 : 1);
+
+  if (displayIndex > 3) {
+    displayIndex = 0;
+  } else if (displayIndex < 0) {
+    displayIndex = 3;
+  }
+
+  console.log(displayIndex);
+
+  headerImg.src = headerItems[displayIndex].img;
+  headerTitleAndLink.textContent = headerItems[displayIndex].title;
+  headerTitleAndLink.setAttribute("href", headerItems[displayIndex].to);
+
+  circles.map((data, index) => {
+    if (index === displayIndex){
+      data.classList.remove("fa-circle-notch");
+      data.classList.add("fa-circle");
+    }
+    else {
+      data.classList.remove("fa-circle");
+      data.classList.add("fa-circle-notch");
+    }
+  })
 }
