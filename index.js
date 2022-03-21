@@ -1,4 +1,3 @@
-
 const collegeItems = [
   {
     pic: "./assets/coe.jpg",
@@ -74,24 +73,25 @@ let headerItems = [
   {
     title: "TUP Manila holds first student rally in campus",
     img: "./assets/header-1.jpg",
-    to: "https://manilatoday.net/tup-manila-holds-first-student-rally-in-campus/"
-  },  
+    to: "https://manilatoday.net/tup-manila-holds-first-student-rally-in-campus/",
+  },
   {
-    title: "Revised guidelines on the conduct of online classes in the University",
+    title:
+      "Revised guidelines on the conduct of online classes in the University",
     img: "./assets/header-2.jpeg",
-    to: "https://drive.google.com/file/d/1MN3e_lkbJnvHNu-r3yM94gD1rszwr_GN/view?usp=sharing"
-  },  
+    to: "https://drive.google.com/file/d/1MN3e_lkbJnvHNu-r3yM94gD1rszwr_GN/view?usp=sharing",
+  },
   {
     title: "Online request of credentials/documents",
     img: "./assets/header-3.jpg",
-    to: "https://docs.google.com/forms/d/e/1FAIpQLScx7Olc4n2csf-M4HTiYFAcMwfdJ2ccLJS7PJwK4FlMIGPj0w/viewform"
-  },  
+    to: "https://docs.google.com/forms/d/e/1FAIpQLScx7Olc4n2csf-M4HTiYFAcMwfdJ2ccLJS7PJwK4FlMIGPj0w/viewform",
+  },
   {
     title: "TUP-M, now ISO 9001:2015 Certified!",
     img: "./assets/header-4.jpg",
-    to: "http://www.tup.edu.ph/#"
-  },  
-]
+    to: "http://www.tup.edu.ph/#",
+  },
+];
 
 const coreValues = [
   {
@@ -120,9 +120,9 @@ const coreValues = [
   },
   {
     letter: "S",
-    text: "Shared responsibility, hardwork, and resourcefulness in compliance to the mandates of the university"
+    text: "Shared responsibility, hardwork, and resourcefulness in compliance to the mandates of the university",
   },
-]
+];
 
 function toggleMobileNav() {
   let mobileNav = document.querySelector("#mobile-nav");
@@ -236,17 +236,15 @@ function switchTabs(tabName) {
   let careers = document.querySelector("#oi-careers");
   let downloads = document.querySelector("#oi-downloads");
 
-  if (tabName === "important"){
+  if (tabName === "important") {
     impLinks.style.display = "grid";
     careers.style.display = "none";
     downloads.style.display = "none";
-  }
-  else if (tabName === "careers"){
+  } else if (tabName === "careers") {
     impLinks.style.display = "none";
     careers.style.display = "grid";
     downloads.style.display = "none";
-  }
-  else if (tabName === "downloads"){
+  } else if (tabName === "downloads") {
     impLinks.style.display = "none";
     careers.style.display = "none";
     downloads.style.display = "grid";
@@ -272,25 +270,54 @@ function switchHeader(direction) {
   } else if (displayIndex < 0) {
     displayIndex = 3;
   }
-  
+
   headerImg.src = headerItems[displayIndex].img;
   headerTitleAndLink.textContent = headerItems[displayIndex].title;
   headerTitleAndLink.setAttribute("href", headerItems[displayIndex].to);
 
   circles.map((data, index) => {
-    if (index === displayIndex){
+    if (index === displayIndex) {
       data.classList.remove("fa-circle-notch");
       data.classList.add("fa-circle");
-    }
-    else {
+    } else {
       data.classList.remove("fa-circle");
       data.classList.add("fa-circle-notch");
     }
-  })
+  });
 }
 
 function switchCoreValue(letter) {
-  let displayText = coreValues.find(data => data.letter === letter);
+  let letterT = document.querySelector("#cv-t");
+  let letterU = document.querySelector("#cv-u");
+  let letterP = document.querySelector("#cv-p");
+  let letterI = document.querySelector("#cv-i");
+  let letterA = document.querySelector("#cv-a");
+  let letterN = document.querySelector("#cv-n");
+  let letterS = document.querySelector("#cv-s");
+
+  let letters = [letterT, letterU, letterP, letterI, letterA, letterN, letterS];
+
+  letters.map((data) => {
+    if(data.textContent.replace(/\s{2,}/g,' ').trim() === letter){
+      data.classList.remove("border-b-transparent");
+      data.classList.add("border-white");
+
+      console.log(data.textContent);
+
+      //increase opacity
+      data.classList.remove("opacity-60");
+      data.classList.add("opacity-100");  
+    } else {
+      data.classList.remove("border-white");
+      data.classList.add("border-b-transparent");
+
+      //decrease opacity
+      data.classList.remove("opacity-100");
+      data.classList.add("opacity-60");
+    }
+  });
+
+  let displayText = coreValues.find((data) => data.letter === letter);
   displayText = displayText.text;
 
   let cvDef = document.querySelector("#cv-definition");

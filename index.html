@@ -225,7 +225,7 @@
         id="news"
         class="mb-8 w-full px-2 pt-4 text-center md:px-8 md:text-left lg:px-20"
       >
-        <h1 class="mb-4 font-oswald text-2xl text-tup-red lg:text-4xl">News</h1>
+        <h1 class="mb-4 font-oswald text-2xl text-tup-red lg:text-5xl">News</h1>
         <div
           id="news-items"
           class="md:grid md:grid-cols-3 md:grid-rows-1 md:gap-2 lg:grid-cols-4"
@@ -511,67 +511,77 @@
         <section id="corevals" class="mt-16 px-4 md:px-10 lg:px-24">
           <div
             id="cv-letters"
-            class="grid w-full grid-cols-7 text-4xl md:px-20 md:text-6xl"
+            class="grid w-full grid-cols-7 text-4xl md:px-20 md:text-8xl"
           >
             <span class="flex w-full justify-center">
               <button
+                id="cv-t"
                 onclick="switchCoreValue('T')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                T
+              T
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
-              onclick="switchCoreValue('U')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                id="cv-u"
+                onclick="switchCoreValue('U')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                U
+              U
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
+                id="cv-p"
                 onclick="switchCoreValue('P')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                P
+              P
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
+                id="cv-i"
                 onclick="switchCoreValue('I')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                I
+              I
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
+                id="cv-a"
                 onclick="switchCoreValue('A')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                A
+              A
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
+                id="cv-n"
                 onclick="switchCoreValue('N')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                N
+              N
               </button>
             </span>
             <span class="flex w-full justify-center">
               <button
+                id="cv-s"
                 onclick="switchCoreValue('S')"
-                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80 focus:border-white focus:opacity-100"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
               >
-                S
+              S
               </button>
             </span>
           </div>
-          <div  class="mt-8 md:px-10 lg:px-20">
-            <p id="cv-definition" class="font-roboto text-white md:text-lg text-center">
+          <div class="mt-8 md:px-10 lg:px-20">
+            <p
+              id="cv-definition"
+              class="text-center font-roboto text-white md:text-lg"
+            >
               Transparent and participatory governance
             </p>
           </div>
