@@ -16,13 +16,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-
     <script src="./index.js"></script>
 
     <title>TUP Website</title>
   </head>
-  <body>
+  <body onload="switchHeader('right')">
     <nav id="upper-nav" class="hidden w-full bg-gray-800 lg:block">
       <ul
         class="flex list-none justify-evenly py-4 text-gray-400 lg:justify-end lg:px-16 lg:py-2 lg:text-sm"
@@ -150,10 +148,7 @@
     </nav>
 
     <header class="relative top-0 z-30 h-[50vh] w-full lg:h-[96vh]">
-      <img
-        src="https://manilatoday.net/wp-content/uploads/2020/03/tup-usg-5-1400x1050.jpg"
-        class="h-full w-full object-cover"
-      />
+      <img id="header-img" class="h-full w-full object-cover" />
       <div
         id="image-filter"
         class="absolute top-0 h-full w-full bg-black opacity-50"
@@ -161,32 +156,36 @@
 
       <div
         id="header-body"
-        class="absolute top-0 left-0 h-full w-full p-6 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
+        class="absolute top-0 left-0 h-full w-full p-6 pr-28 text-white lg:flex lg:items-end lg:justify-between lg:p-24"
       >
         <div id="header-text">
-          <h1 class="font-oswald text-2xl lg:text-4xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h1>
-          <p class="font-sans opacity-70 lg:text-2xl">Announcements</p>
+          <p class="font-roboto opacity-70 lg:text-2xl">Announcements</p>
+          <a
+            href="#"
+            id="header-title"
+            class="font-oswald text-2xl lg:text-4xl"
+          >
+          </a>
         </div>
         <div id="indicator" class="hidden items-center text-white lg:flex">
           <div class="mx-1">
-            <i class="fa-solid fa-circle"></i>
+            <i id="circle-1" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-2" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-3" class="fa-solid fa-circle-notch"></i>
           </div>
           <div class="mx-1">
-            <i class="fa-solid fa-circle-notch"></i>
+            <i id="circle-4" class="fa-solid fa-circle-notch"></i>
           </div>
         </div>
       </div>
 
       <button
         id="carousel-left-toggle"
+        onclick="switchHeader('left')"
         class="outline-none absolute top-1/2 left-0 ml-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-left fa-2xl"></i>
@@ -194,6 +193,7 @@
 
       <button
         id="carousel-right-toggle"
+        onclick="switchHeader('right')"
         class="outline-none absolute top-1/2 right-0 mr-12 rounded-full py-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
       >
         <i class="fa-solid fa-angle-right fa-2xl"></i>
@@ -202,7 +202,7 @@
 
     <nav
       id="quick-links"
-      class="flex items-center justify-between bg-tup-red py-4 px-3 font-sans text-white lg:m-10 lg:grid lg:grid-cols-2 lg:rounded-full lg:px-12 lg:shadow-lg"
+      class="flex items-center justify-between bg-tup-red py-4 px-3 font-roboto text-white lg:m-10 lg:grid lg:grid-cols-2 lg:rounded-full lg:px-12 lg:shadow-lg"
     >
       <span class="hidden lg:block">
         <h1 class="font-bold">Quick links</h1>
@@ -225,7 +225,7 @@
         id="news"
         class="mb-8 w-full px-2 pt-4 text-center md:px-8 md:text-left lg:px-20"
       >
-        <h1 class="mb-4 font-oswald text-2xl text-tup-red lg:text-4xl">News</h1>
+        <h1 class="mb-4 font-oswald text-2xl text-tup-red lg:text-5xl">News</h1>
         <div
           id="news-items"
           class="md:grid md:grid-cols-3 md:grid-rows-1 md:gap-2 lg:grid-cols-4"
@@ -238,6 +238,7 @@
                 src="./assets/torres-desk.jpg"
                 alt="tup-president"
                 class="h-full w-full object-cover lg:h-48 lg:w-48 lg:rounded-full"
+                loading="lazy"
               />
             </div>
             <div
@@ -247,8 +248,8 @@
                 President's corner
               </h1>
               <p class="text-sm lg:mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                adipisci nesciunt iusto ab voluptatibus esse repudiandae
+                The TUP is getting prepared for the restart of the face-to-face
+                classes
               </p>
               <button
                 class="mt-auto rounded-md bg-tup-red p-2 text-sm text-white text-opacity-80 lg:mt-0 lg:w-32"
@@ -266,6 +267,7 @@
                   src="./assets/gearhawks.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -290,6 +292,7 @@
                   src="./assets/mpei.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -313,6 +316,7 @@
                   src="./assets/school.jpg"
                   alt="article-img"
                   class="h-64 w-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div class="p-4 text-left">
@@ -376,93 +380,261 @@
           <div id="oi-body" class="flex h-full flex-col">
             <div class="oi-tabs grid grid-cols-3 grid-rows-1">
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-100 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('important')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Important Links
               </button>
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('careers')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Careers
               </button>
               <button
-                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 active:opacity-100"
+                onclick="switchTabs('downloads')"
+                class="bg-tup-red py-3 font-oswald text-white opacity-80 hover:opacity-100 focus:opacity-100"
               >
                 Downloads
               </button>
             </div>
-            <div
-              id="oi-importantlinks"
-              class="hidden h-full grid-cols-1 grid-rows-4 pt-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-2"
-            >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+            <span id="oi-current-tab" class="flex h-full flex-col">
+              <div
+                id="oi-importantlinks"
+                class="hidden h-full grid-cols-1 grid-rows-4 pt-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-2"
               >
-                <i class="fa-solid fa-chalkboard-user fa-lg mr-6"></i>
-                Faculty access module
-              </a>
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-graduation-cap fa-lg mr-6"></i> Student
-                access module</a
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                >
+                  <i class="fa-solid fa-chalkboard-user fa-lg mr-6"></i>
+                  Faculty access module
+                </a>
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-graduation-cap fa-lg mr-6"></i> Student
+                  access module</a
+                >
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-book-open-reader fa-lg mr-6"></i>
+                  Student Applicant access module</a
+                >
+                <a
+                  href="#"
+                  class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
+                  ><i class="fa-solid fa-money-check fa-lg mr-6"></i> Landbank
+                  E-payment portal</a
+                >
+              </div>
+              <div id="oi-careers" class="grid h-full grid-cols-1 grid-rows-4">
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Administrative Aide VI - Clerk III</a
+                >
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Administrative Officer V - Cashier III</a
+                >
+                <a
+                  href="#"
+                  class="flex w-full items-center border border-gray-300 px-2"
+                  >Statistician I</a
+                >
+                <a
+                  id="oi-careers-readmore"
+                  href="#"
+                  class="flex items-center justify-center bg-tup-red text-white active:bg-tup-dark"
+                  >Click here for more</a
+                >
+              </div>
+              <div
+                id="oi-downloads"
+                class="hidden h-full grid-cols-1 grid-rows-4"
               >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-book-open-reader fa-lg mr-6"></i> Student
-                Applicant access module</a
-              >
-              <a
-                href="#"
-                class="flex h-full w-full items-center justify-start border border-gray-300 pl-6 lg:rounded-md"
-                ><i class="fa-solid fa-money-check fa-lg mr-6"></i> Landbank
-                E-payment portal</a
-              >
-            </div>
-            <div id="oi-careers" class="hidden h-full grid-cols-1 grid-rows-4">
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Administrative Aide VI - Clerk III</a
-              >
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Administrative Officer V - Cashier III</a
-              >
-              <a
-                href="#"
-                class="flex w-full items-center border border-gray-300 px-2"
-                >Statistician I</a
-              >
-              <a
-                id="oi-careers-readmore"
-                href="#"
-                class="flex items-center justify-center bg-tup-red text-white active:bg-tup-dark"
-                >Click here for more</a
-              >
-            </div>
-            <div id="oi-downloads" class="grid h-full grid-cols-1 grid-rows-4">
-              <a
-                href="#"
-                class="flex items-center justify-between border border-gray-300 px-2 hover:bg-gray-200"
-              >
-                TUP Student Handbook
-                <span>
-                  <i class="fa-solid fa-circle-down fa-lg"></i>
-                </span>
-              </a>
-            </div>
+                <a
+                  href="#"
+                  class="flex items-center justify-between border border-gray-300 px-2 hover:bg-gray-200"
+                >
+                  TUP Student Handbook
+                  <span>
+                    <i class="fa-solid fa-circle-down fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+            </span>
           </div>
         </section>
       </div>
 
-      <div class="mt-10 box-border bg-tup-red">
-        <section id="colleges" class="flex md:h-[80vh] flex-col md:px-10 lg:px-20">
+      <div class="mt-10 box-border bg-tup-red pt-14">
+        <section
+          id="misvis"
+          class="flex flex-col gap-8 p-4 text-white md:grid md:grid-cols-2 md:grid-rows-1 md:py-0 md:px-10 lg:px-52"
+        >
+          <article>
+            <h1
+              class="mb-4 border-b-4 border-white pb-4 text-center font-oswald text-4xl lg:text-5xl"
+            >
+              Mission
+            </h1>
+            <p class="text-justify">
+              The University shall provide higher and advanced vocational,
+              technical, industrial, technological and professional education
+              and training in industries and technology, and in practical arts
+              leading to certificates, diplomas and degrees. It shall provide
+              progressive leadership in applied research, developmental studies
+              in technical, industrial, and technological fields and production
+              using indigenous materials; effect technology transfer in the
+              countryside; and assist in the development of small-and-medium
+              scale industries in identified growth centers.
+            </p>
+          </article>
+          <article>
+            <h1
+              class="mb-4 border-b-4 border-white pb-4 text-center font-oswald text-4xl lg:text-5xl"
+            >
+              Vision
+            </h1>
+            <p class="text-justify">
+              TUP: A premier state university with recognized excellence in
+              engineering and technology education at par with leading
+              universities in the ASEAN region
+            </p>
+          </article>
+        </section>
+
+        <section id="corevals" class="mt-32 px-4 md:px-10 lg:px-24">
+          <div
+            id="cv-letters"
+            class="grid w-full grid-cols-7 text-4xl md:px-20 md:text-8xl"
+          >
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-t"
+                onclick="switchCoreValue('T')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                T
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-u"
+                onclick="switchCoreValue('U')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                U
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-p"
+                onclick="switchCoreValue('P')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                P
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-i"
+                onclick="switchCoreValue('I')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                I
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-a"
+                onclick="switchCoreValue('A')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                A
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-n"
+                onclick="switchCoreValue('N')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                N
+              </button>
+            </span>
+            <span class="flex w-full justify-center">
+              <button
+                id="cv-s"
+                onclick="switchCoreValue('S')"
+                class="border-b-4 border-b-transparent pb-3 font-oswald font-bold text-white opacity-60 transition ease-in-out hover:border-white hover:opacity-80"
+              >
+                S
+              </button>
+            </span>
+          </div>
+          <div class="mt-8 md:px-10 lg:px-20">
+            <p
+              id="cv-definition"
+              class="text-center font-roboto text-white md:text-lg"
+            >
+              Transparent and participatory governance
+            </p>
+          </div>
+        </section>
+
+        <section id="goals" class="mt-32 px-4 md:px-10 lg:px-56">
+          <p class="text-white pb-8 text-justify lg:text-lg">
+            TUP shall commit to provide quality higher and advanced education;
+            conduct relevant research and extension projects; continually
+            improve its value to customers through enhancement of personnel
+            competence and effective quality management system compliant to
+            statutory and regulatory requirements.
+          </p>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">1</h1>
+              <p>Quality & Responsive Curricular Offerings</p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">2</h1>
+              <p>Excellence in Engineering & Technology Research</p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">3</h1>
+              <p>Leadership in Community Services</p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">4</h1>
+              <p>Strengthening Capability & Competence</p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">5</h1>
+              <p>
+                Modernized University System & Efficient Management of Resources
+              </p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">6</h1>
+              <p>Increased Financial Viability</p>
+            </div>
+            <div class="flex justify-start text-white">
+              <h1 class="mr-4 font-oswald text-7xl font-bold md:mr-8">7</h1>
+              <p>Enhanced Network & Sustained Collaboration Initiatives</p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="colleges"
+          class="flex flex-col md:mt-16 md:h-[80vh] md:px-10 lg:px-56"
+        >
           <h1
-            class="mb-8 w-full pt-8 text-center font-oswald text-4xl text-white md:text-left"
+            class="w-full border-none border-white py-8 text-center font-oswald text-4xl text-white md:mb-8 md:border-b-4 md:border-solid md:text-5xl"
           >
             Colleges
           </h1>
@@ -476,6 +648,7 @@
                   src="./assets/coe.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -484,6 +657,7 @@
                     src="./assets/coe-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Engineering
@@ -497,6 +671,7 @@
                   src="./assets/cos.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -505,6 +680,7 @@
                     src="./assets/cos-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Science
@@ -518,6 +694,7 @@
                   src="./assets/cofa.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -526,6 +703,7 @@
                     src="./assets/cafa-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Fine Arts
@@ -539,6 +717,7 @@
                   src="./assets/cit.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -547,6 +726,7 @@
                     src="./assets/cit-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Industrial Technology
@@ -560,6 +740,7 @@
                   src="./assets/cola.jpg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -568,6 +749,7 @@
                     src="./assets/cla-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Liberal Arts
@@ -581,6 +763,7 @@
                   src="./assets/coie.jpeg"
                   alt="college-item-pic"
                   class="absolute h-full w-full object-cover brightness-50"
+                  loading="lazy"
                 />
                 <span
                   class="absolute flex h-full w-full flex-col justify-between px-4 py-8"
@@ -589,6 +772,7 @@
                     src="./assets/cie-logo.png"
                     alt="college-item-logo"
                     class="w-28"
+                    loading="lazy"
                   />
                   <h1 class="font-oswald text-3xl text-white">
                     College of Industrial Education
@@ -599,16 +783,16 @@
           </div>
 
           <div class="grid h-full grid-cols-12">
-            <div class="items-center justify-center hidden md:flex">
+            <div class="hidden items-center justify-center md:flex">
               <button
-              onclick="renderCollegeItem('left')"  
-              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+                onclick="renderCollegeItem('left')"
+                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-left fa-2xl"></i>
               </button>
             </div>
             <div
-              class="col-span-10 hidden flex-col items-center md:flex h-full"
+              class="col-span-10 hidden h-full flex-col items-center md:flex"
             >
               <article class="grid h-full grid-cols-12">
                 <div class="relative col-span-5 h-full">
@@ -617,18 +801,20 @@
                     alt="college-item-pic"
                     id="college-item-pic"
                     class="absolute h-full w-full object-cover brightness-75"
+                    loading="lazy"
                   />
                   <img
                     src="./assets/coe-logo.png"
                     alt="college-item-logo"
                     id="college-item-logo"
                     class="absolute bottom-0 left-0 m-4 h-24 lg:h-32"
+                    loading="lazy"
                   />
                 </div>
-                <div
-                  class="col-span-7 ml-4 border-l-2 border-white pl-4 text-white flex flex-col"
-                >
-                  <h1 id="college-item-name" class="font-oswald text-3xl">College of Engineering</h1>
+                <div class="col-span-7 ml-4 flex flex-col pl-4 text-white">
+                  <h1 id="college-item-name" class="font-oswald text-3xl">
+                    College of Engineering
+                  </h1>
                   <p id="college-item-desc" class="mt-4 text-justify">
                     The College of Engineering (COE) is a recipient of Center of
                     Development (COD) status from the Commission on Higher
@@ -637,7 +823,7 @@
                     researches for industry and society to maximally contribute
                     to national development.
                   </p>
-                  <ol id="college-item-goal" class="text-sm mt-auto">
+                  <ol id="college-item-goal" class="mt-auto text-sm">
                     <li>
                       <b>1.</b> Offer technology-oriented curricula in
                       engineering and management leading to the Bachelor,
@@ -660,10 +846,10 @@
                 </div>
               </article>
             </div>
-            <div class="items-center justify-center hidden md:flex">
+            <div class="hidden items-center justify-center md:flex">
               <button
-              onclick="renderCollegeItem('right')"    
-              class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
+                onclick="renderCollegeItem('right')"
+                class="rounded-full p-4 px-5 text-white transition ease-in-out hover:bg-white hover:text-black active:scale-90"
               >
                 <i class="fa-solid fa-angle-right fa-2xl"></i>
               </button>
@@ -671,12 +857,14 @@
           </div>
         </section>
 
-        <section id="campuses" class="flex flex-col md:h-[90vh]">
-          <h1
-            class="w-full px-2 pt-8 pb-8 text-center font-oswald text-4xl text-white md:px-20 md:text-left"
-          >
-            Campuses
-          </h1>
+        <section id="campuses" class="flex flex-col md:mt-28 md:h-[95vh]">
+          <span class="px-8 md:px-10 lg:px-20">
+            <h1
+              class="w-full border-none border-white px-2 pt-8 pb-8 text-center font-oswald text-4xl text-white md:mb-8 md:border-b-4 md:border-solid md:px-20 md:text-5xl"
+            >
+              Campuses
+            </h1>
+          </span>
           <div
             id="campus-items"
             class="lg:no-scrollbar mt-5 flex overflow-scroll overflow-x-scroll md:flex md:h-full"
@@ -690,6 +878,7 @@
                   src="./assets/school.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -700,7 +889,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Manila</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>tup@tup.edu.ph</p>
                     <p>www.tup.edu.ph</p>
                     <p>301.3001</p>
@@ -717,6 +906,7 @@
                   src="./assets/tup-cavite.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -727,7 +917,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Cavite</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>cavite@tup.edu.ph</p>
                     <p>www.tupcavite.edu.ph</p>
                     <p>416.4920</p>
@@ -744,6 +934,7 @@
                   src="./assets/tup-taguig.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -754,7 +945,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Taguig</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>taguig@tup.edu.ph</p>
                     <p>www.tupt.edu.ph</p>
                     <p>823.2457</p>
@@ -771,6 +962,7 @@
                   src="./assets/tup-vis.jpg"
                   alt="campus-item"
                   class="absolute h-full w-full object-cover"
+                  loading="lazy"
                 />
                 <div
                   id="filter"
@@ -781,7 +973,7 @@
                   class="absolute flex h-full w-full flex-col justify-between p-8 text-white"
                 >
                   <h1 class="font-oswald text-4xl">Visayas</h1>
-                  <span class="font-sans">
+                  <span class="font-roboto">
                     <p>visayas@tup.edu.ph</p>
                     <p>www.tupvisayas.edu.ph</p>
                     <p>(034) 495 3480</p>
@@ -805,6 +997,7 @@
             src="./assets/pilipinas.png"
             alt="ph-coa"
             class="h-20 w-20 lg:mr-10 lg:h-28 lg:w-28"
+            loading="lazy"
           />
           <div class="flex flex-col items-center justify-center p-4 lg:hidden">
             <h1 class="mb-2 font-oswald text-2xl text-white">
@@ -818,6 +1011,7 @@
             src="./assets/tup-logo.png"
             alt="tup-logo"
             class="h-20 w-20 lg:h-28 lg:w-28"
+            loading="lazy"
           />
         </div>
         <div class="mt-6 hidden flex-col items-center justify-center lg:flex">

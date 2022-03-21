@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         oswald: "'Oswald', serif",
+        roboto: "'Roboto', serif"
       },
     },
   },
