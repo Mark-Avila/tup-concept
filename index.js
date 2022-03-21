@@ -127,12 +127,17 @@ const coreValues = [
 function toggleMobileNav() {
   let mobileNav = document.querySelector("#mobile-nav");
   let state = window.getComputedStyle(mobileNav, null).display;
+  let navIcon = document.querySelector("#nav-mobile-icon");
 
   if (state === "block") {
     mobileNav.style.display = "none";
+    navIcon.classList.remove("fa-xmark");
+    navIcon.classList.add("fa-bars");
   }
   if (state === "none") {
     mobileNav.style.display = "block";
+    navIcon.classList.remove("fa-bars");
+    navIcon.classList.add("fa-xmark");
   }
 }
 
@@ -324,3 +329,4 @@ function switchCoreValue(letter) {
 
   cvDef.textContent = displayText;
 }
+

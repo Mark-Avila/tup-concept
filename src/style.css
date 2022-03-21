@@ -16,4 +16,8 @@
   .campus-trans {
     transition: 200ms ease-in-out;
   }
+
+  .sticky {
+    position: sticky;
+  }
 }
